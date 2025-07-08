@@ -6,6 +6,7 @@ const Courses = () => {
     {
       title: "Mastering Data Structures in Python: From Fundamentals to Advanced Applications",
       description: "",
+      icon: Code,
       url: "www.youtube.com"
     }
   ];
