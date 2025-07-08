@@ -109,7 +109,7 @@ const About = () => {
             <ul className="space-y-4 text-lg text-gray-700">
               <li className="flex items-start">
                 <span className="w-2 h-2 bg-[#009C9F] rounded-full mt-3 mr-4 flex-shrink-0"></span>
-                Technology, Finance, Legal – Courses
+                Courses Technology, Finance, Legal 
               </li>
               <li className="flex items-start">
                 <span className="w-2 h-2 bg-[#009C9F] rounded-full mt-3 mr-4 flex-shrink-0"></span>
