@@ -54,7 +54,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-[#00446E] mb-1">Email</h4>
-                  <p className="text-gray-700">Contactus@alconsultingltd.com</p>
+                  <p className="text-gray-700">contact@edhub360.com</p>
                 </div>
               </div>
 
@@ -64,7 +64,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-[#00446E] mb-1">Phone</h4>
-                  <p className="text-gray-700">+1 (555) 123-4567</p>
+                  <p className="text-gray-700">331 230 8027</p>
                 </div>
               </div>
 
@@ -75,8 +75,7 @@ const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-[#00446E] mb-1">Address</h4>
                   <p className="text-gray-700">
-                    123 Education Avenue<br />
-                    Learning City, LC 12345<br />
+                    Aurora, IL 60504<br />
                     United States
                   </p>
                 </div>
@@ -107,15 +106,6 @@ const Contact = () => {
                 <Calendar size={20} className="mr-2" />
                 Schedule Now
               </button>
-            </div>
-
-            {/* Map Placeholder */}
-            <div className="mt-8 bg-gray-200 rounded-2xl h-64 flex items-center justify-center">
-              <div className="text-center text-gray-500">
-                <MapPin size={48} className="mx-auto mb-2" />
-                <p>Interactive Map</p>
-                <p className="text-sm">123 Education Avenue, Learning City</p>
-              </div>
             </div>
           </div>
 
@@ -206,6 +196,10 @@ const Contact = () => {
 
               <button
                 type="submit"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = 'mailto:contact@edhub360.com';
+                }}
                 className="w-full bg-gradient-to-r from-[#009C9F] to-[#00446E] text-white py-4 px-6 rounded-lg font-semibold hover:from-[#00446E] hover:to-[#009C9F] transition-all duration-300 flex items-center justify-center group"
               >
                 <Send size={20} className="mr-2 group-hover:translate-x-1 transition-transform" />

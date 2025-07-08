@@ -26,7 +26,7 @@ const Hero: React.FC<HeroProps> = ({ onGetInTouch, onExploreSolutions }) => {
             </h1>
             
             <p className="text-xl sm:text-2xl mb-8 text-gray-200 font-light">
-              Effective • Affordable • Accessible
+              Tailored • Affordable • Empowering
             </p>
             
             <p className="text-lg mb-10 text-gray-300 max-w-xl">
@@ -62,12 +62,12 @@ const Hero: React.FC<HeroProps> = ({ onGetInTouch, onExploreSolutions }) => {
                   <div className="text-2xl font-bold">24/7</div>
                   <div className="text-sm text-gray-300">AI Support</div>
                 </div>
-                <div className="bg-[#BEA260]/20 rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold">100%</div>
+                <div className="text-2xl font-bold">1/10th</div>
+                <div className="text-sm text-gray-300">Cost Effective</div>
                   <div className="text-sm text-gray-300">Personalized</div>
                 </div>
-                <div className="bg-[#BEA260]/20 rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold">∞</div>
+                <div className="text-2xl font-bold">5×</div>
+                <div className="text-sm text-gray-300">Faster Learning with Streamlined Content</div>
                   <div className="text-sm text-gray-300">Scalable</div>
                 </div>
               </div>
@@ -75,7 +75,7 @@ const Hero: React.FC<HeroProps> = ({ onGetInTouch, onExploreSolutions }) => {
                 <button className="bg-white/20 hover:bg-white/30 rounded-full p-4 transition-colors">
                   <Play size={24} fill="currentColor" />
                 </button>
-                <p className="text-sm mt-2 text-gray-300">Watch Demo</p>
+                <div className="text-sm text-gray-300">Smarter Learning ∞ Powered by Humans + AI</div>
               </div>
             </div>
           </div>

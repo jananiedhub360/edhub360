@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 interface HeaderProps {
-  currentView: 'home' | 'about' | 'contact';
-  onNavigate: (view: 'home' | 'about' | 'contact') => void;
+  currentView: 'home' | 'about' | 'contact' | 'courses';
+  onNavigate: (view: 'home' | 'about' | 'contact' | 'courses') => void;
 }
 
 const Header: React.FC<HeaderProps> = ({ currentView, onNavigate }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleNavigation = (view: 'home' | 'about' | 'contact') => {
+  const handleNavigation = (view: 'home' | 'about' | 'contact' | 'courses') => {
     onNavigate(view);
     setIsMenuOpen(false);
   };
@@ -21,7 +21,7 @@ const Header: React.FC<HeaderProps> = ({ currentView, onNavigate }) => {
           {/* Logo and Company Name */}
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => handleNavigation('home')}>
             <img 
-              src="/logo.jpg" 
+              src="/logo.png" 
               alt="EDHUB360 Logo" 
               className="h-10 w-auto"
             />
@@ -46,6 +46,16 @@ const Header: React.FC<HeaderProps> = ({ currentView, onNavigate }) => {
               }`}
             >
               Home
+            </button>
+            <button 
+              onClick={() => handleNavigation('courses')}
+              className={`transition-colors font-medium ${
+                currentView === 'courses' 
+                  ? 'text-[#009C9F] border-b-2 border-[#009C9F] pb-1' 
+                  : 'text-gray-700 hover:text-[#009C9F]'
+              }`}
+            >
+              Courses
             </button>
             <button 
               onClick={() => handleNavigation('about')}
@@ -104,6 +114,16 @@ const Header: React.FC<HeaderProps> = ({ currentView, onNavigate }) => {
                 }`}
               >
                 Home
+              </button>
+              <button 
+                onClick={() => handleNavigation('courses')}
+                className={`text-left transition-colors font-medium ${
+                  currentView === 'courses' 
+                    ? 'text-[#009C9F] font-semibold' 
+                    : 'text-gray-700 hover:text-[#009C9F]'
+                }`}
+              >
+                Courses
               </button>
               <button 
                 onClick={() => handleNavigation('about')}

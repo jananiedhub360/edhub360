@@ -20,7 +20,7 @@ const WhyEdHub = () => {
     },
     {
       icon: Search,
-      title: "Smart Study Tools (Google‑Scholar‑plus‑ExplainPaper style)",
+      title: "Smart Study Tools",
       description: "Advanced research and comprehension tools that make complex topics accessible"
     },
     {

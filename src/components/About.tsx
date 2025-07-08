@@ -95,58 +95,43 @@ const About = () => {
         </div>
 
         {/* Our Values */}
-        <div className="mb-20">
-          <h3 className="text-3xl font-bold text-[#00446E] mb-12 text-center">Our Values</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="flex items-start space-x-4 p-6 rounded-xl hover:bg-gray-50 transition-colors">
-                <div className="bg-gradient-to-br from-[#BEA260] to-[#009C9F] text-white p-3 rounded-lg flex-shrink-0">
-                  <value.icon size={24} />
-                </div>
-                <div>
-                  <h4 className="text-xl font-semibold text-[#00446E] mb-2">{value.title}</h4>
-                  <p className="text-gray-700">{value.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="mb-20 text-center bg-gradient-to-r from-[#009C9F] to-[#00446E] text-white rounded-2xl p-8 lg:p-12">
+          <h3 className="text-3xl font-bold mb-6">Our Values</h3>
+          <p className="text-lg leading-relaxed max-w-4xl mx-auto">
+            We value accessibility, purposeful innovation, and meaningful collaboration. Every solution we build is aimed at creating measurable impact in learners' lives—regardless of their background or location.
+          </p>
         </div>
 
-        {/* Team Section */}
-        <div className="mb-20">
-          <h3 className="text-3xl font-bold text-[#00446E] mb-12 text-center">Our Team</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((_, index) => (
-              <div key={index} className="text-center">
-                <div className="w-32 h-32 bg-gradient-to-br from-[#009C9F] to-[#00446E] rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <Users size={48} className="text-white" />
-                </div>
-                <h4 className="text-xl font-semibold text-[#00446E] mb-2">Team Member</h4>
-                <p className="text-gray-600">Role & Expertise</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Timeline */}
+        {/* Roadmap */}
         <div>
-          <h3 className="text-3xl font-bold text-[#00446E] mb-12 text-center">Our Journey</h3>
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-[#009C9F]"></div>
-            {timeline.map((item, index) => (
-              <div key={index} className={`flex items-center mb-8 ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
-                <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                  <div className="bg-white border-2 border-[#009C9F] rounded-lg p-4 shadow-sm">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <Calendar size={16} className="text-[#009C9F]" />
-                      <span className="font-bold text-[#00446E]">{item.year}</span>
-                    </div>
-                    <p className="text-gray-700">{item.event}</p>
-                  </div>
-                </div>
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#BEA260] rounded-full border-4 border-white"></div>
-              </div>
-            ))}
+          <h3 className="text-3xl font-bold text-[#00446E] mb-12 text-center">Our Roadmap</h3>
+          <div className="bg-gray-50 rounded-2xl p-8 lg:p-12">
+            <ul className="space-y-4 text-lg text-gray-700">
+              <li className="flex items-start">
+                <span className="w-2 h-2 bg-[#009C9F] rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                Technology, Finance, Legal – Courses
+              </li>
+              <li className="flex items-start">
+                <span className="w-2 h-2 bg-[#009C9F] rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                Across Geographies
+              </li>
+              <li className="flex items-start">
+                <span className="w-2 h-2 bg-[#009C9F] rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                Continuing Education for Professionals – Upskilling
+              </li>
+              <li className="flex items-start">
+                <span className="w-2 h-2 bg-[#009C9F] rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                Community Learning
+              </li>
+              <li className="flex items-start">
+                <span className="w-2 h-2 bg-[#009C9F] rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                Including personal interaction with Industry Experts
+              </li>
+              <li className="flex items-start">
+                <span className="w-2 h-2 bg-[#009C9F] rounded-full mt-3 mr-4 flex-shrink-0"></span>
+                Future Implementations → AI BOT interactively training
+              </li>
+            </ul>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Linkedin, Instagram } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <img 
-                src="/logo.jpg" 
+                src="/logo.png" 
                 alt="EDHUB360 Logo" 
                 className="h-12 w-auto"
               />
@@ -25,8 +25,10 @@ const Footer = () => {
               <a href="#" className="text-gray-300 hover:text-[#BEA260] transition-colors" aria-label="Facebook">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-[#BEA260] transition-colors" aria-label="Twitter">
-                <Twitter size={20} />
+              <a href="#" className="text-gray-300 hover:text-[#BEA260] transition-colors" aria-label="X (Twitter)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
               </a>
               <a href="#" className="text-gray-300 hover:text-[#BEA260] transition-colors" aria-label="LinkedIn">
                 <Linkedin size={20} />
@@ -54,15 +56,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center">
                 <Mail size={16} className="mr-2 text-[#BEA260]" />
-                <span className="text-gray-300 text-sm">Contactus@alconsultingltd.com</span>
+                <span className="text-gray-300 text-sm">contact@edhub360.com</span>
               </div>
               <div className="flex items-center">
                 <Phone size={16} className="mr-2 text-[#BEA260]" />
-                <span className="text-gray-300 text-sm">+1 (555) 123-4567</span>
+                <span className="text-gray-300 text-sm">331 230 8027</span>
               </div>
               <div className="flex items-start">
                 <MapPin size={16} className="mr-2 text-[#BEA260] mt-0.5" />
-                <span className="text-gray-300 text-sm">123 Education Ave<br />Learning City, LC 12345</span>
+                <span className="text-gray-300 text-sm">Aurora, IL 60504</span>
               </div>
             </div>
           </div>
