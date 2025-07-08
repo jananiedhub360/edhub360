@@ -55,7 +55,7 @@ const Hero: React.FC<HeroProps> = ({ onGetInTouch, onExploreSolutions }) => {
             <div className="relative z-10 bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="bg-[#BEA260]/20 rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold">10x</div>
+                  <div className="text-2xl font-bold">110x</div>
                   <div className="text-sm text-gray-300">Cost Effective</div>
                 </div>
                 <div className="bg-[#BEA260]/20 rounded-lg p-4 text-center">
@@ -63,12 +63,12 @@ const Hero: React.FC<HeroProps> = ({ onGetInTouch, onExploreSolutions }) => {
                   <div className="text-sm text-gray-300">Faster Learning with Streamlined Content</div>
                 </div>
                 <div className="bg-[#BEA260]/20 rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold">100%</div>
-                  <div className="text-sm text-gray-300">Personalized</div>
-                </div>
-                <div className="bg-[#BEA260]/20 rounded-lg p-4 text-center">
                   <div className="text-2xl font-bold">∞</div>
                   <div className="text-sm text-gray-300">Smarter Learning Powered by Humans + AI</div>
+                </div>
+                <div className="bg-[#BEA260]/20 rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold">100%</div>
+                  <div className="text-sm text-gray-300">Personalized</div>
                 </div>
               </div>
               <div className="text-center">
