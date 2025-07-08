@@ -1,13 +1,13 @@
 import React from 'react';
-import { ExternalLink, Code, DollarSign, Briefcase, TrendingUp } from 'lucide-react';
+import { ExternalLink, DollarSign, Briefcase, TrendingUp } from 'lucide-react';
 
 const Courses = () => {
   const technologyCourses = [
     {
       title: "Mastering Data Structures in Python: From Fundamentals to Advanced Applications",
       description: "",
-      icon: Code,
-      url: "www.youtube.com"
+      image: "/python-course.png",
+      url: "https://edhub360.trainercentralsite.com/course/mastering-data-structures-in-python-from-fundamentals-to-advanced-applications"
     }
   ];
 
@@ -20,14 +20,24 @@ const Courses = () => {
     }
   ];
 
-  const CourseCard = ({ course, index }: { course: any; index: number }) => (
+  const CourseCard = ({ course, index, hasImage = false }: { course: any; index: number; hasImage?: boolean }) => (
     <div 
       key={index} 
       className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group hover:border-[#009C9F] transform hover:-translate-y-2"
     >
-      <div className="bg-gradient-to-br from-[#009C9F] to-[#00446E] text-white p-4 rounded-xl w-fit mb-6 group-hover:scale-110 transition-transform duration-300">
-        <course.icon size={32} />
-      </div>
+      {hasImage && course.image ? (
+        <div className="mb-6">
+          <img 
+            src={course.image} 
+            alt={course.title}
+            className="w-full h-48 object-cover rounded-xl shadow-md group-hover:shadow-lg transition-shadow duration-300"
+          />
+        </div>
+      ) : (
+        <div className="bg-gradient-to-br from-[#009C9F] to-[#00446E] text-white p-4 rounded-xl w-fit mb-6 group-hover:scale-110 transition-transform duration-300">
+          <course.icon size={32} />
+        </div>
+      )}
       
       <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-[#009C9F] transition-colors">
         {course.title}
@@ -39,6 +49,8 @@ const Courses = () => {
 
       <a
         href={course.url}
+        target="_blank"
+        rel="noopener noreferrer"
         className="inline-flex items-center bg-gradient-to-r from-[#009C9F] to-[#00446E] text-white px-6 py-3 rounded-full font-semibold hover:from-[#00446E] hover:to-[#009C9F] transition-all duration-300 group/btn"
       >
         Explore Course
@@ -69,7 +81,7 @@ const Courses = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {technologyCourses.map((course, index) => (
-              <CourseCard key={index} course={course} index={index} />
+              <CourseCard key={index} course={course} index={index} hasImage={true} />
             ))}
           </div>
         </div>
