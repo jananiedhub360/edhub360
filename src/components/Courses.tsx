@@ -5,8 +5,8 @@ const Courses = () => {
   const technologyCourses = [
     {
       title: "Mastering Data Structures in Python: From Fundamentals to Advanced Applications",
-      description: "Master modern web development with React, Node.js, and cloud deployment",
-      icon: Code,
+      description: "",
+      icon: Python,
       url: "www.youtube.com"
     }
   ];
