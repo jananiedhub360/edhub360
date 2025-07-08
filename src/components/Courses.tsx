@@ -17,24 +17,6 @@ const Courses = () => {
       description: "Learn advanced Excel, financial statements analysis, and valuation techniques",
       icon: DollarSign,
       url: "#"
-    },
-    {
-      title: "Investment Banking Fundamentals",
-      description: "Master M&A, IPOs, and capital markets with real-world case studies",
-      icon: TrendingUp,
-      url: "#"
-    },
-    {
-      title: "Risk Management & Compliance",
-      description: "Understand regulatory frameworks and risk assessment methodologies",
-      icon: Briefcase,
-      url: "#"
-    },
-    {
-      title: "Cryptocurrency & Blockchain",
-      description: "Explore digital assets, DeFi, and blockchain technology applications",
-      icon: DollarSign,
-      url: "#"
     }
   ];
 
