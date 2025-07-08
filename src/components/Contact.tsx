@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send, Calendar } from 'lucide-react';
+import PrivacyPolicyModal from './PrivacyPolicyModal';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,8 @@ const Contact = () => {
     message: '',
     gdprConsent: false
   });
+
+  const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -190,7 +193,13 @@ const Contact = () => {
                 />
                 <label htmlFor="gdprConsent" className="text-sm text-gray-700">
                   I agree to the processing of my personal data in accordance with the{' '}
-                  <a href="#" className="text-[#009C9F] hover:underline">Privacy Policy</a> and consent to being contacted regarding my inquiry. *
+                  <button 
+                    type="button"
+                    onClick={() => setIsPrivacyModalOpen(true)}
+                    className="text-[#009C9F] hover:underline"
+                  >
+                    Privacy Policy
+                  </button> and consent to being contacted regarding my inquiry. *
                 </label>
               </div>
 
@@ -213,6 +222,11 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      
+      <PrivacyPolicyModal 
+        isOpen={isPrivacyModalOpen} 
+        onClose={() => setIsPrivacyModalOpen(false)} 
+      />
     </section>
   );
 };
