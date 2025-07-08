@@ -4,28 +4,10 @@ import { ExternalLink, Code, DollarSign, Briefcase, TrendingUp } from 'lucide-re
 const Courses = () => {
   const technologyCourses = [
     {
-      title: "Full Stack Web Development",
+      title: "Mastering Data Structures in Python: From Fundamentals to Advanced Applications",
       description: "Master modern web development with React, Node.js, and cloud deployment",
       icon: Code,
       url: "https://edhub360.trainercentralsite.com/course/mastering-data-structures-in-python-from-fundamentals-to-advanced-applications"
-    },
-    {
-      title: "Data Science & Machine Learning",
-      description: "Learn Python, AI algorithms, and data analysis for real-world applications",
-      icon: TrendingUp,
-      url: "#"
-    },
-    {
-      title: "Mobile App Development",
-      description: "Build native and cross-platform mobile apps with React Native and Flutter",
-      icon: Code,
-      url: "#"
-    },
-    {
-      title: "Cloud Computing & DevOps",
-      description: "Master AWS, Docker, Kubernetes, and modern deployment strategies",
-      icon: Briefcase,
-      url: "#"
     }
   ];
 
