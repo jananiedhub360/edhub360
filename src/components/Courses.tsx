@@ -7,7 +7,7 @@ const Courses = () => {
       title: "Mastering Data Structures in Python: From Fundamentals to Advanced Applications",
       description: "Master modern web development with React, Node.js, and cloud deployment",
       icon: Code,
-      url: "https://edhub360.trainercentralsite.com/course/mastering-data-structures-in-python-from-fundamentals-to-advanced-applications"
+      url: "www.youtube.com"
     }
   ];
 
