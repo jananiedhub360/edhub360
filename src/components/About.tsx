@@ -115,10 +115,7 @@ const About = () => {
               <div className="relative flex items-center">
                 <div className="w-1/2 pr-8 text-right">
                   <div className="bg-white border-2 border-[#009C9F] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div className="flex items-center justify-end space-x-3 mb-3">
-                      <h4 className="text-xl font-bold text-[#00446E]">Step 1</h4>
-                      <div className="bg-gradient-to-br from-[#009C9F] to-[#00446E] text-white px-3 py-1 rounded-full text-sm font-semibold">01</div>
-                    </div>
+                    <h4 className="text-xl font-bold text-[#00446E] mb-3 text-right">Step 1</h4>
                     <p className="text-gray-700 leading-relaxed">Specialized Courses in Technology, Finance, and Legal</p>
                   </div>
                 </div>
@@ -132,10 +129,7 @@ const About = () => {
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#BEA260] rounded-full border-4 border-white shadow-lg z-10"></div>
                 <div className="w-1/2 pl-8">
                   <div className="bg-white border-2 border-[#009C9F] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div className="flex items-center space-x-3 mb-3">
-                      <div className="bg-gradient-to-br from-[#009C9F] to-[#00446E] text-white px-3 py-1 rounded-full text-sm font-semibold">02</div>
-                      <h4 className="text-xl font-bold text-[#00446E]">Step 2</h4>
-                    </div>
+                    <h4 className="text-xl font-bold text-[#00446E] mb-3">Step 2</h4>
                     <p className="text-gray-700 leading-relaxed">Global Reach Across Diverse Geographies</p>
                   </div>
                 </div>
@@ -145,10 +139,7 @@ const About = () => {
               <div className="relative flex items-center">
                 <div className="w-1/2 pr-8 text-right">
                   <div className="bg-white border-2 border-[#009C9F] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div className="flex items-center justify-end space-x-3 mb-3">
-                      <h4 className="text-xl font-bold text-[#00446E]">Step 3</h4>
-                      <div className="bg-gradient-to-br from-[#009C9F] to-[#00446E] text-white px-3 py-1 rounded-full text-sm font-semibold">03</div>
-                    </div>
+                    <h4 className="text-xl font-bold text-[#00446E] mb-3 text-right">Step 3</h4>
                     <p className="text-gray-700 leading-relaxed">Ongoing Professional Development and Upskilling</p>
                   </div>
                 </div>
@@ -162,10 +153,7 @@ const About = () => {
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#BEA260] rounded-full border-4 border-white shadow-lg z-10"></div>
                 <div className="w-1/2 pl-8">
                   <div className="bg-white border-2 border-[#009C9F] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div className="flex items-center space-x-3 mb-3">
-                      <div className="bg-gradient-to-br from-[#009C9F] to-[#00446E] text-white px-3 py-1 rounded-full text-sm font-semibold">04</div>
-                      <h4 className="text-xl font-bold text-[#00446E]">Step 4</h4>
-                    </div>
+                    <h4 className="text-xl font-bold text-[#00446E] mb-3">Step 4</h4>
                     <p className="text-gray-700 leading-relaxed">Collaborative and Inclusive Community-Based Learning</p>
                   </div>
                 </div>
@@ -175,10 +163,7 @@ const About = () => {
               <div className="relative flex items-center">
                 <div className="w-1/2 pr-8 text-right">
                   <div className="bg-white border-2 border-[#009C9F] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div className="flex items-center justify-end space-x-3 mb-3">
-                      <h4 className="text-xl font-bold text-[#00446E]">Step 5</h4>
-                      <div className="bg-gradient-to-br from-[#009C9F] to-[#00446E] text-white px-3 py-1 rounded-full text-sm font-semibold">05</div>
-                    </div>
+                    <h4 className="text-xl font-bold text-[#00446E] mb-3 text-right">Step 5</h4>
                     <p className="text-gray-700 leading-relaxed">Direct Engagement with Industry Experts</p>
                   </div>
                 </div>
@@ -192,10 +177,7 @@ const About = () => {
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#BEA260] rounded-full border-4 border-white shadow-lg z-10"></div>
                 <div className="w-1/2 pl-8">
                   <div className="bg-white border-2 border-[#009C9F] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div className="flex items-center space-x-3 mb-3">
-                      <div className="bg-gradient-to-br from-[#009C9F] to-[#00446E] text-white px-3 py-1 rounded-full text-sm font-semibold">06</div>
-                      <h4 className="text-xl font-bold text-[#00446E]">Step 6</h4>
-                    </div>
+                    <h4 className="text-xl font-bold text-[#00446E] mb-3">Step 6</h4>
                     <p className="text-gray-700 leading-relaxed">Future Vision: AI-Powered Interactive Learning Bots</p>
                   </div>
                 </div>
@@ -205,18 +187,15 @@ const About = () => {
             {/* Mobile Timeline - Stacked Layout */}
             <div className="md:hidden space-y-8">
               {[
-                { step: "01", title: "Step 1", content: "Specialized Courses in Technology, Finance, and Legal" },
-                { step: "02", title: "Step 2", content: "Global Reach Across Diverse Geographies" },
-                { step: "03", title: "Step 3", content: "Ongoing Professional Development and Upskilling" },
-                { step: "04", title: "Step 4", content: "Collaborative and Inclusive Community-Based Learning" },
-                { step: "05", title: "Step 5", content: "Direct Engagement with Industry Experts" },
-                { step: "06", title: "Step 6", content: "Future Vision: AI-Powered Interactive Learning Bots" }
+                { title: "Step 1", content: "Specialized Courses in Technology, Finance, and Legal" },
+                { title: "Step 2", content: "Global Reach Across Diverse Geographies" },
+                { title: "Step 3", content: "Ongoing Professional Development and Upskilling" },
+                { title: "Step 4", content: "Collaborative and Inclusive Community-Based Learning" },
+                { title: "Step 5", content: "Direct Engagement with Industry Experts" },
+                { title: "Step 6", content: "Future Vision: AI-Powered Interactive Learning Bots" }
               ].map((item, index) => (
                 <div key={index} className="bg-white border-2 border-[#009C9F] rounded-2xl p-6 shadow-lg">
-                  <div className="flex items-center space-x-3 mb-3">
-                    <div className="bg-gradient-to-br from-[#009C9F] to-[#00446E] text-white px-3 py-1 rounded-full text-sm font-semibold">{item.step}</div>
-                    <h4 className="text-xl font-bold text-[#00446E]">{item.title}</h4>
-                  </div>
+                  <h4 className="text-xl font-bold text-[#00446E] mb-3">{item.title}</h4>
                   <p className="text-gray-700 leading-relaxed">{item.content}</p>
                 </div>
               ))}
