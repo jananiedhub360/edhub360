@@ -7,7 +7,7 @@ const Courses = () => {
       title: "Full Stack Web Development",
       description: "Master modern web development with React, Node.js, and cloud deployment",
       icon: Code,
-      url: "#"
+      url: "https://edhub360.trainercentralsite.com/course/mastering-data-structures-in-python-from-fundamentals-to-advanced-applications"
     },
     {
       title: "Data Science & Machine Learning",
