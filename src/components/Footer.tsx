@@ -3,8 +3,18 @@ import { useState } from 'react';
 import { Mail, Phone, MapPin, Facebook, Linkedin, Instagram } from 'lucide-react';
 import PrivacyPolicyModal from './PrivacyPolicyModal';
 
-const Footer = () => {
+interface FooterProps {
+  onNavigate?: (view: 'home' | 'about' | 'contact' | 'courses') => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
+
+  const handleNavigation = (view: 'home' | 'about' | 'contact' | 'courses') => {
+    if (onNavigate) {
+      onNavigate(view);
+    }
+  };
 
   return (
     <>
@@ -48,10 +58,38 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="#home" className="text-gray-300 hover:text-[#BEA260] transition-colors">Home</a></li>
-              <li><a href="#courses" className="text-gray-300 hover:text-[#BEA260] transition-colors">Courses</a></li>
-              <li><a href="#about" className="text-gray-300 hover:text-[#BEA260] transition-colors">About Us</a></li>
-              <li><a href="#contact" className="text-gray-300 hover:text-[#BEA260] transition-colors">Contact</a></li>
+              <li>
+                <button 
+                  onClick={() => handleNavigation('home')}
+                  className="text-gray-300 hover:text-[#BEA260] transition-colors text-left"
+                >
+                  Home
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleNavigation('courses')}
+                  className="text-gray-300 hover:text-[#BEA260] transition-colors text-left"
+                >
+                  Courses
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleNavigation('about')}
+                  className="text-gray-300 hover:text-[#BEA260] transition-colors text-left"
+                >
+                  About Us
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleNavigation('contact')}
+                  className="text-gray-300 hover:text-[#BEA260] transition-colors text-left"
+                >
+                  Contact
+                </button>
+              </li>
               <li>
                 <button 
                   onClick={() => setIsPrivacyModalOpen(true)}

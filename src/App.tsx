@@ -42,7 +42,7 @@ function App() {
       <main>
         {renderCurrentView()}
       </main>
-      <Footer />
+      <Footer onNavigate={setCurrentView} />
     </div>
   );
 }

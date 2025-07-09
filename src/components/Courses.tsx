@@ -1,11 +1,11 @@
 import React from 'react';
-import { ExternalLink, DollarSign, Briefcase, TrendingUp } from 'lucide-react';
+import { ExternalLink, DollarSign, Briefcase, Scale } from 'lucide-react';
 
 const Courses = () => {
   const technologyCourses = [
     {
       title: "Mastering Data Structures in Python: From Fundamentals to Advanced Applications",
-      description: "",
+      description: "Learn essential data structures and algorithms to build efficient, scalable applications",
       image: "/python-course.png",
       url: "https://edhub360.trainercentralsite.com/course/mastering-data-structures-in-python-from-fundamentals-to-advanced-applications"
     }
@@ -20,10 +20,19 @@ const Courses = () => {
     }
   ];
 
+  const legalCourses = [
+    {
+      title: "Legal Fundamentals for Business",
+      description: "Essential legal knowledge for entrepreneurs and business professionals",
+      icon: Scale,
+      url: "#"
+    }
+  ];
+
   const CourseCard = ({ course, index, hasImage = false }: { course: any; index: number; hasImage?: boolean }) => (
     <div 
       key={index} 
-      className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group hover:border-[#009C9F] transform hover:-translate-y-2"
+      className="bg-white rounded-2xl p-6 lg:p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group hover:border-[#009C9F] transform hover:-translate-y-2"
     >
       {hasImage && course.image ? (
         <div className="mb-6">
@@ -39,11 +48,11 @@ const Courses = () => {
         </div>
       )}
       
-      <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-[#009C9F] transition-colors">
+      <h3 className="text-lg lg:text-xl font-bold text-gray-900 mb-4 group-hover:text-[#009C9F] transition-colors line-clamp-2">
         {course.title}
       </h3>
       
-      <p className="text-gray-600 leading-relaxed mb-6">
+      <p className="text-gray-600 leading-relaxed mb-6 text-sm lg:text-base">
         {course.description}
       </p>
 
@@ -51,7 +60,7 @@ const Courses = () => {
         href={course.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center bg-gradient-to-r from-[#009C9F] to-[#00446E] text-white px-6 py-3 rounded-full font-semibold hover:from-[#00446E] hover:to-[#009C9F] transition-all duration-300 group/btn"
+        className="inline-flex items-center bg-gradient-to-r from-[#009C9F] to-[#00446E] text-white px-4 lg:px-6 py-2 lg:py-3 rounded-full font-semibold hover:from-[#00446E] hover:to-[#009C9F] transition-all duration-300 group/btn text-sm lg:text-base"
       >
         Enroll Now
         <ExternalLink size={16} className="ml-2 group-hover/btn:translate-x-1 transition-transform" />
@@ -79,7 +88,7 @@ const Courses = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6 lg:gap-8">
             {technologyCourses.map((course, index) => (
               <CourseCard key={index} course={course} index={index} hasImage={true} />
             ))}
@@ -87,7 +96,7 @@ const Courses = () => {
         </div>
 
         {/* Finance Section */}
-        <div>
+        <div className="mb-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-[#00446E] mb-4">Finance</h3>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -95,8 +104,24 @@ const Courses = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6 lg:gap-8">
             {financeCourses.map((course, index) => (
+              <CourseCard key={index} course={course} index={index} />
+            ))}
+          </div>
+        </div>
+
+        {/* Legal Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-[#00446E] mb-4">Legal</h3>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Build essential legal knowledge for business, compliance, and professional development
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6 lg:gap-8">
+            {legalCourses.map((course, index) => (
               <CourseCard key={index} course={course} index={index} />
             ))}
           </div>
