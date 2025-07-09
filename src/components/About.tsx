@@ -122,82 +122,82 @@ const About = () => {
         {/* Roadmap */}
         <div>
           <h3 className="text-3xl font-bold text-[#00446E] mb-12 text-center">Our Strategic Direction</h3>
-          <div className="relative max-w-4xl mx-auto">
+          <div className="relative max-w-3xl mx-auto">
             {/* Desktop Timeline */}
             <div className="hidden md:block">
               {/* Vertical Timeline Line */}
               <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-[#009C9F] to-[#BEA260]"></div>
               
               {/* Timeline Steps */}
-              <div className="space-y-12">
+              <div className="space-y-8">
                 {/* Step 1 */}
                 <div className="relative flex items-center">
-                  <div className="w-1/2 pr-8 text-right">
-                    <div className="bg-white border-2 border-[#009C9F] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                      <h4 className="text-xl font-bold text-[#00446E] mb-3 text-right">Q3-2025</h4>
-                      <p className="text-gray-700 leading-relaxed">Specialized Courses in Technology, Finance, and Legal</p>
+                  <div className="w-1/2 pr-6 text-right">
+                    <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                      <h4 className="text-lg font-bold text-[#00446E] mb-2 text-right">Q3-2025</h4>
+                      <p className="text-gray-700 leading-relaxed text-sm">Specialized Courses in Technology, Finance, and Legal</p>
                     </div>
                   </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#BEA260] rounded-full border-4 border-white shadow-lg z-10"></div>
-                  <div className="w-1/2 pl-8"></div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-[#BEA260] rounded-full border-3 border-white shadow-lg z-10"></div>
+                  <div className="w-1/2 pl-6"></div>
                 </div>
 
                 {/* Step 2 */}
                 <div className="relative flex items-center">
-                  <div className="w-1/2 pr-8"></div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#BEA260] rounded-full border-4 border-white shadow-lg z-10"></div>
-                  <div className="w-1/2 pl-8">
-                    <div className="bg-white border-2 border-[#009C9F] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                      <h4 className="text-xl font-bold text-[#00446E] mb-3">Q4-2025</h4>
-                      <p className="text-gray-700 leading-relaxed">Global Reach Across Diverse Geographies</p>
+                  <div className="w-1/2 pr-6"></div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-[#BEA260] rounded-full border-3 border-white shadow-lg z-10"></div>
+                  <div className="w-1/2 pl-6">
+                    <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                      <h4 className="text-lg font-bold text-[#00446E] mb-2">Q4-2025</h4>
+                      <p className="text-gray-700 leading-relaxed text-sm">Global Reach Across Diverse Geographies</p>
                     </div>
                   </div>
                 </div>
 
                 {/* Step 3 */}
                 <div className="relative flex items-center">
-                  <div className="w-1/2 pr-8 text-right">
-                    <div className="bg-white border-2 border-[#009C9F] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                      <h4 className="text-xl font-bold text-[#00446E] mb-3 text-right">Q1-2026</h4>
-                      <p className="text-gray-700 leading-relaxed">Continuous Professional Development and Upskilling</p>
+                  <div className="w-1/2 pr-6 text-right">
+                    <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                      <h4 className="text-lg font-bold text-[#00446E] mb-2 text-right">Q1-2026</h4>
+                      <p className="text-gray-700 leading-relaxed text-sm">Continuous Professional Development and Upskilling</p>
                     </div>
                   </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#BEA260] rounded-full border-4 border-white shadow-lg z-10"></div>
-                  <div className="w-1/2 pl-8"></div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-[#BEA260] rounded-full border-3 border-white shadow-lg z-10"></div>
+                  <div className="w-1/2 pl-6"></div>
                 </div>
 
                 {/* Step 4 */}
                 <div className="relative flex items-center">
-                  <div className="w-1/2 pr-8"></div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#BEA260] rounded-full border-4 border-white shadow-lg z-10"></div>
-                  <div className="w-1/2 pl-8">
-                    <div className="bg-white border-2 border-[#009C9F] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                      <h4 className="text-xl font-bold text-[#00446E] mb-3">Q2-2026</h4>
-                      <p className="text-gray-700 leading-relaxed">Collaborative and Inclusive Community-Based Learning</p>
+                  <div className="w-1/2 pr-6"></div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-[#BEA260] rounded-full border-3 border-white shadow-lg z-10"></div>
+                  <div className="w-1/2 pl-6">
+                    <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                      <h4 className="text-lg font-bold text-[#00446E] mb-2">Q2-2026</h4>
+                      <p className="text-gray-700 leading-relaxed text-sm">Collaborative and Inclusive Community-Based Learning</p>
                     </div>
                   </div>
                 </div>
 
                 {/* Step 5 */}
                 <div className="relative flex items-center">
-                  <div className="w-1/2 pr-8 text-right">
-                    <div className="bg-white border-2 border-[#009C9F] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                      <h4 className="text-xl font-bold text-[#00446E] mb-3 text-right">Q3-2026</h4>
-                      <p className="text-gray-700 leading-relaxed">Engage with Industry Experts</p>
+                  <div className="w-1/2 pr-6 text-right">
+                    <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                      <h4 className="text-lg font-bold text-[#00446E] mb-2 text-right">Q3-2026</h4>
+                      <p className="text-gray-700 leading-relaxed text-sm">Engage with Industry Experts</p>
                     </div>
                   </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#BEA260] rounded-full border-4 border-white shadow-lg z-10"></div>
-                  <div className="w-1/2 pl-8"></div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-[#BEA260] rounded-full border-3 border-white shadow-lg z-10"></div>
+                  <div className="w-1/2 pl-6"></div>
                 </div>
 
                 {/* Step 6 */}
                 <div className="relative flex items-center">
-                  <div className="w-1/2 pr-8"></div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#BEA260] rounded-full border-4 border-white shadow-lg z-10"></div>
-                  <div className="w-1/2 pl-8">
-                    <div className="bg-white border-2 border-[#009C9F] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                      <h4 className="text-xl font-bold text-[#00446E] mb-3">Q4-2026</h4>
-                      <p className="text-gray-700 leading-relaxed">Future Vision: AI-Powered Interactive Learning Bots</p>
+                  <div className="w-1/2 pr-6"></div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-[#BEA260] rounded-full border-3 border-white shadow-lg z-10"></div>
+                  <div className="w-1/2 pl-6">
+                    <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                      <h4 className="text-lg font-bold text-[#00446E] mb-2">Q4-2026</h4>
+                      <p className="text-gray-700 leading-relaxed text-sm">Future Vision: AI-Powered Interactive Learning Bots</p>
                     </div>
                   </div>
                 </div>
@@ -205,7 +205,7 @@ const About = () => {
             </div>
 
             {/* Mobile Timeline - Stacked Layout */}
-            <div className="md:hidden space-y-8">
+            <div className="md:hidden space-y-4">
               {[
                 { title: "Q3-2025", content: "Specialized Courses in Technology, Finance, and Legal" },
                 { title: "Q4-2025", content: "Global Reach Across Diverse Geographies" },
@@ -214,9 +214,9 @@ const About = () => {
                 { title: "Q3-2026", content: "Engage with Industry Experts" },
                 { title: "Q4-2026", content: "Future Vision: AI-Powered Interactive Learning Bots" }
               ].map((item, index) => (
-                <div key={index} className="bg-white border-2 border-[#009C9F] rounded-2xl p-6 shadow-lg">
-                  <h4 className="text-xl font-bold text-[#00446E] mb-3">{item.title}</h4>
-                  <p className="text-gray-700 leading-relaxed">{item.content}</p>
+                <div key={index} className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg">
+                  <h4 className="text-lg font-bold text-[#00446E] mb-2">{item.title}</h4>
+                  <p className="text-gray-700 leading-relaxed text-sm">{item.content}</p>
                 </div>
               ))}
             </div>
