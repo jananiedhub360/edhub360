@@ -62,7 +62,7 @@ const Hero: React.FC<HeroProps> = ({ onGetInTouch, onExploreSolutions }) => {
         <div className="absolute bottom-32 left-1/4 w-16 h-16 border border-[#BEA260] rounded-full"></div>
       </div>
 
-      <div className="relative max-w-6xl mx-auto px-3 sm:px-4 lg:px-6 py-16 lg:py-24">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="text-center lg:text-left">
