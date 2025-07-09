@@ -26,7 +26,7 @@ const Hero: React.FC<HeroProps> = ({ onGetInTouch, onExploreSolutions }) => {
             </h1>
             
             <p className="text-xl sm:text-2xl mb-8 text-gray-200 font-light">
-              Tailored • Affordable • Empowering
+              Tailored • Affordable • Transformative
             </p>
             
             <p className="text-lg mb-10 text-gray-300 max-w-xl">
