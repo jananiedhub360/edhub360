@@ -5,7 +5,7 @@ const Courses = () => {
   const technologyCourses = [
     {
       title: "Mastering Data Structures in Python: From Fundamentals to Advanced Applications",
-      description: "Learn essential data structures and algorithms to build efficient, scalable applications",
+      description: "",
       image: "/course_image.jpg",
       url: "https://edhub360.trainercentralsite.com/course/mastering-data-structures-in-python-from-fundamentals-to-advanced-applications"
     }
