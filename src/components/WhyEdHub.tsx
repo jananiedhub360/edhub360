@@ -67,29 +67,6 @@ const WhyEdHub = () => {
             </div>
           ))}
         </div>
-
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-[#009C9F] to-[#00446E] text-white rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">The Future of Education is Here</h3>
-            <p className="text-lg text-gray-200 mb-6">
-              Join thousands of learners who have already discovered the power of AI-driven, personalized education that adapts to their needs and accelerates their success.
-            </p>
-            <div className="flex justify-center items-center space-x-8 text-sm">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-[#BEA260]">90%</div>
-                <div>Cost Reduction</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-[#BEA260]">5x</div>
-                <div>Faster Learning</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-[#BEA260]">100%</div>
-                <div>Personalized</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
