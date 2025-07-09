@@ -83,7 +83,7 @@ const About = () => {
               <div className="relative flex items-center">
                 <div className="w-1/2 pr-8 text-right">
                   <div className="bg-white border-2 border-[#009C9F] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <h4 className="text-xl font-bold text-[#00446E] mb-3 text-right">Q3 2025</h4>
+                    <h4 className="text-xl font-bold text-[#00446E] mb-3 text-right">Q3-2025</h4>
                     <p className="text-gray-700 leading-relaxed">Specialized Courses in Technology, Finance, and Legal</p>
                   </div>
                 </div>
@@ -97,7 +97,7 @@ const About = () => {
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#BEA260] rounded-full border-4 border-white shadow-lg z-10"></div>
                 <div className="w-1/2 pl-8">
                   <div className="bg-white border-2 border-[#009C9F] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <h4 className="text-xl font-bold text-[#00446E] mb-3">Step 2</h4>
+                    <h4 className="text-xl font-bold text-[#00446E] mb-3">Q4-2025</h4>
                     <p className="text-gray-700 leading-relaxed">Global Reach Across Diverse Geographies</p>
                   </div>
                 </div>
@@ -107,8 +107,8 @@ const About = () => {
               <div className="relative flex items-center">
                 <div className="w-1/2 pr-8 text-right">
                   <div className="bg-white border-2 border-[#009C9F] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <h4 className="text-xl font-bold text-[#00446E] mb-3 text-right">Step 3</h4>
-                    <p className="text-gray-700 leading-relaxed">Ongoing Professional Development and Upskilling</p>
+                    <h4 className="text-xl font-bold text-[#00446E] mb-3 text-right">Q1-2026</h4>
+                    <p className="text-gray-700 leading-relaxed">Continuous Professional Development and Upskilling</p>
                   </div>
                 </div>
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#BEA260] rounded-full border-4 border-white shadow-lg z-10"></div>
@@ -121,7 +121,7 @@ const About = () => {
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#BEA260] rounded-full border-4 border-white shadow-lg z-10"></div>
                 <div className="w-1/2 pl-8">
                   <div className="bg-white border-2 border-[#009C9F] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <h4 className="text-xl font-bold text-[#00446E] mb-3">Step 4</h4>
+                    <h4 className="text-xl font-bold text-[#00446E] mb-3">Q2-2026</h4>
                     <p className="text-gray-700 leading-relaxed">Collaborative and Inclusive Community-Based Learning</p>
                   </div>
                 </div>
@@ -131,8 +131,8 @@ const About = () => {
               <div className="relative flex items-center">
                 <div className="w-1/2 pr-8 text-right">
                   <div className="bg-white border-2 border-[#009C9F] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <h4 className="text-xl font-bold text-[#00446E] mb-3 text-right">Step 5</h4>
-                    <p className="text-gray-700 leading-relaxed">Direct Engagement with Industry Experts</p>
+                    <h4 className="text-xl font-bold text-[#00446E] mb-3 text-right">Q3-2026</h4>
+                    <p className="text-gray-700 leading-relaxed">Engage with Industry Experts</p>
                   </div>
                 </div>
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#BEA260] rounded-full border-4 border-white shadow-lg z-10"></div>
@@ -145,7 +145,7 @@ const About = () => {
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-[#BEA260] rounded-full border-4 border-white shadow-lg z-10"></div>
                 <div className="w-1/2 pl-8">
                   <div className="bg-white border-2 border-[#009C9F] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <h4 className="text-xl font-bold text-[#00446E] mb-3">Step 6</h4>
+                    <h4 className="text-xl font-bold text-[#00446E] mb-3">Q4-2026</h4>
                     <p className="text-gray-700 leading-relaxed">Future Vision: AI-Powered Interactive Learning Bots</p>
                   </div>
                 </div>
