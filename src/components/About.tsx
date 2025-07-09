@@ -59,48 +59,22 @@ const About = () => {
         </div>
 
         {/* Our Values - Text Left, Visual Right */}
-        <div className="mb-20">
+         <div className="mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-bold text-[#00446E] mb-6">Our Values</h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-[#009C9F] text-white p-2 rounded-lg flex-shrink-0">
-                    <Target size={20} />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Accessibility First</h4>
-                    <p className="text-gray-600 text-sm">Learning should be available to everyone—not just those who can afford it.</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="bg-[#009C9F] text-white p-2 rounded-lg flex-shrink-0">
-                    <Lightbulb size={20} />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Innovation with Purpose</h4>
-                    <p className="text-gray-600 text-sm">Every tool we build serves a real educational need—not just a trend.</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="bg-[#009C9F] text-white p-2 rounded-lg flex-shrink-0">
-                    <Heart size={20} />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Collaboration Over Competition</h4>
-                    <p className="text-gray-600 text-sm">We work hand-in-hand with educators and learners to refine and improve everything we offer.</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="bg-[#009C9F] text-white p-2 rounded-lg flex-shrink-0">
-                    <Award size={20} />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Impact You Can Measure</h4>
-                    <p className="text-gray-600 text-sm">Our goal is not just engagement, but transformation—in knowledge, confidence, and opportunity.</p>
-                  </div>
-                </div>
-              </div>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                At EdHub360, we believe education should be within everyone’s reach—affordable and accessible, not reserved for the few. That’s why we prioritize breaking barriers to learning for all.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                We focus on innovation with purpose, creating tools that solve real problems, not just follow trends. Every feature we build is designed to make learning more meaningful and effective.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                We value collaboration over competition, working closely with educators and learners to continuously evolve and improve.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                And above all, we strive for impact you can measure—transforming not just knowledge, but confidence and opportunity in every learner's journey.
+              </p>
             </div>
             <div className="flex justify-center lg:justify-end">
               <div className="bg-gradient-to-br from-[#00446E] to-[#BEA260] text-white p-12 rounded-2xl shadow-lg">
