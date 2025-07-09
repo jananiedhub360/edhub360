@@ -53,7 +53,7 @@ const Courses = () => {
         rel="noopener noreferrer"
         className="inline-flex items-center bg-gradient-to-r from-[#009C9F] to-[#00446E] text-white px-6 py-3 rounded-full font-semibold hover:from-[#00446E] hover:to-[#009C9F] transition-all duration-300 group/btn"
       >
-        Explore Course
+        Enroll Now
         <ExternalLink size={16} className="ml-2 group-hover/btn:translate-x-1 transition-transform" />
       </a>
     </div>
