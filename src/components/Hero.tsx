@@ -59,8 +59,8 @@ const Hero: React.FC<HeroProps> = ({ onGetInTouch, onExploreSolutions }) => {
                   <div className="text-sm text-gray-300">Cost Reduction</div>
                 </div>
                 <div className="bg-[#BEA260]/20 rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold">Faster Learning with Streamlined Content</div>
-                  <div className="text-sm text-gray-300"></div>
+                  <div className="text-2xl font-bold"></div>
+                  <div className="text-sm text-gray-300">Faster Learning with Relevant Content</div>
                 </div>
                 <div className="bg-[#BEA260]/20 rounded-lg p-4 text-center">
                   <div className="text-2xl font-bold">∞</div>
