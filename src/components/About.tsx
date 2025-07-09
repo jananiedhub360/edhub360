@@ -121,7 +121,7 @@ const About = () => {
 
         {/* Roadmap */}
         <div>
-          <h3 className="text-3xl font-bold text-[#00446E] mb-12 text-center">Our Roadmap</h3>
+          <h3 className="text-3xl font-bold text-[#00446E] mb-12 text-center">Our Strategic Direction</h3>
           <div className="relative max-w-4xl mx-auto">
             {/* Desktop Timeline */}
             <div className="hidden md:block">
