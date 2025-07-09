@@ -31,8 +31,8 @@ const CTASection: React.FC<CTASectionProps> = ({ onScheduleDemo, onLearnMore }) 
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-r from-[#009C9F] to-[#00446E] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 bg-gradient-to-r from-[#009C9F] to-[#00446E] text-white">
+      <div className="max-w-6xl mx-auto px-3 sm:px-4 lg:px-6">
         {/* The Future We're Building */}
         <div>
           <h3 className="text-4xl font-bold text-center mb-12">The Future We're Building</h3>

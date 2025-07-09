@@ -36,8 +36,8 @@ const WhyEdHub = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
+      <div className="max-w-6xl mx-auto px-3 sm:px-4 lg:px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Why EdHub?

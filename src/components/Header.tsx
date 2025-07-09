@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ currentView, onNavigate }) => {
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-3 sm:px-4 lg:px-6">
         <div className="flex justify-between items-center h-20">
           {/* Logo and Company Name */}
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => handleNavigation('home')}>
