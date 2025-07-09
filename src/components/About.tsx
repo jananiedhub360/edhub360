@@ -43,15 +43,6 @@ const About = () => {
           </p>
         </div>
 
-        {/* Our Story */}
-        <div className="mb-20">
-          <h3 className="text-3xl font-bold text-[#00446E] mb-6">Our Story</h3>
-          <p className="text-lg text-gray-700 leading-relaxed mb-8">
-            At EdHub, we are driven by a simple but powerful idea: education should be effective, affordable, and accessible to all. 
-            We build intelligent, user-focused learning solutions that empower individuals, educators, and organizations to grow—without being limited by outdated systems or high costs. Our tools are crafted to support every stage of the learning journey, from foundational skills to advanced knowledge, across academic and professional settings.
-          </p>
-        </div>
-
         {/* Why We Exist */}
         <div className="mb-20 bg-gray-50 rounded-2xl p-8 lg:p-12">
           <h3 className="text-3xl font-bold text-[#00446E] mb-6">Why We Exist</h3>
@@ -61,29 +52,6 @@ const About = () => {
           <p className="text-lg text-gray-700 leading-relaxed">
             Our mission is to democratize access to high-quality education through technology that adapts, engages, and scales. We're here to help people learn better, faster, and more affordably—no matter who they are or where they start.
           </p>
-        </div>
-
-        {/* What We Do */}
-        <div className="mb-20">
-          <h3 className="text-3xl font-bold text-[#00446E] mb-8">What We Do</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-[#009C9F]/10 to-[#00446E]/10 rounded-xl p-6">
-              <h4 className="text-xl font-semibold text-[#00446E] mb-3">Modern Learning Platforms</h4>
-              <p className="text-gray-700">Create intuitive, flexible platforms built to scale with your needs.</p>
-            </div>
-            <div className="bg-gradient-to-br from-[#009C9F]/10 to-[#00446E]/10 rounded-xl p-6">
-              <h4 className="text-xl font-semibold text-[#00446E] mb-3">Cost-Effective Solutions</h4>
-              <p className="text-gray-700">Design affordable course solutions accessible to institutions and individuals.</p>
-            </div>
-            <div className="bg-gradient-to-br from-[#009C9F]/10 to-[#00446E]/10 rounded-xl p-6">
-              <h4 className="text-xl font-semibold text-[#00446E] mb-3">Smart Personalization</h4>
-              <p className="text-gray-700">Use data and automation to personalize learning experiences and improve outcomes.</p>
-            </div>
-            <div className="bg-gradient-to-br from-[#009C9F]/10 to-[#00446E]/10 rounded-xl p-6">
-              <h4 className="text-xl font-semibold text-[#00446E] mb-3">Collaborative Communities</h4>
-              <p className="text-gray-700">Enable engaging, human-centered knowledge-sharing communities.</p>
-            </div>
-          </div>
         </div>
 
         {/* Our Vision */}
