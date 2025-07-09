@@ -45,7 +45,7 @@ const About = () => {
 
         {/* Why We Exist */}
         <div className="mb-20 bg-gray-50 rounded-2xl p-8 lg:p-12">
-          <h3 className="text-3xl font-bold text-[#00446E] mb-6">Why We Exist</h3>
+          <h3 className="text-3xl font-bold text-[#00446E] mb-6">Our Purpose</h3>
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
             The world is changing rapidly, and education must evolve with it. Traditional learning models often fall short—limited by cost, rigid delivery, and lack of personalization. We exist to close that gap.
           </p>
