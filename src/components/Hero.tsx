@@ -55,8 +55,8 @@ const Hero: React.FC<HeroProps> = ({ onGetInTouch, onExploreSolutions }) => {
             <div className="relative z-10 bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="bg-[#BEA260]/20 rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold">110x</div>
-                  <div className="text-sm text-gray-300">Cost Effective</div>
+                  <div className="text-2xl font-bold">1/10th</div>
+                  <div className="text-sm text-gray-300">Cost </div>
                 </div>
                 <div className="bg-[#BEA260]/20 rounded-lg p-4 text-center">
                   <div className="text-2xl font-bold">5×</div>
