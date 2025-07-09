@@ -83,7 +83,7 @@ const About = () => {
               <div className="relative flex items-center">
                 <div className="w-1/2 pr-8 text-right">
                   <div className="bg-white border-2 border-[#009C9F] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <h4 className="text-xl font-bold text-[#00446E] mb-3 text-right">Step 1</h4>
+                    <h4 className="text-xl font-bold text-[#00446E] mb-3 text-right">Q3 2025</h4>
                     <p className="text-gray-700 leading-relaxed">Specialized Courses in Technology, Finance, and Legal</p>
                   </div>
                 </div>
