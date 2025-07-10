@@ -138,9 +138,9 @@ const About = () => {
               <div className="absolute inset-0">
                 {/* Q3-2025 - Above road */}
                 <div className="absolute" style={{ left: '115px', top: '120px' }}>
-                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                     <div className="flex items-center mb-2">
-                      <GraduationCap size={16} className="text-[#009C9F] mr-1" />
+                      <GraduationCap size={16} className="text-[#009C9F] mr-2" />
                       <h4 className="text-sm font-bold text-[#00446E]">Q3-2025</h4>
                     </div>
                     <p className="text-gray-700 text-xs leading-tight">Specialized Courses in Technology, Finance, and Legal</p>
