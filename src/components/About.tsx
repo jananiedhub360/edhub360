@@ -147,7 +147,7 @@ const About = () => {
                   </div>
                 </div>
 
-                 {/* Q4-2025 - Below road */}
+                {/* Q4-2025 - Below road */}
                   <div className="absolute" style={{ left: '345px', top: '420px' }}>
                     <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                       <div className="flex items-center mb-2">
@@ -160,7 +160,7 @@ const About = () => {
                     </div>
                   </div>
   
-                  {/* Q1-2026 - Above road */}
+                {/* Q1-2026 - Above road */}
                   <div className="absolute" style={{ left: '595px', top: '130px' }}>
                     <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                       <div className="flex items-center mb-2">
