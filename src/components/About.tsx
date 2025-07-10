@@ -137,7 +137,7 @@ const About = () => {
               {/* Milestones */}
               <div className="absolute inset-0">
                 {/* Q3-2025 - Above road */}
-                <div className="absolute" style={{ left: '115px', top: '150px' }}>
+                <div className="absolute" style={{ left: '115px', top: '155px' }}>
                   <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                     <div className="flex items-center mb-2">
                       <GraduationCap size={18} className="text-[#009C9F] mr-2" />
@@ -161,7 +161,7 @@ const About = () => {
                   </div>
   
                 {/* Q1-2026 - Above road */}
-                  <div className="absolute" style={{ left: '525px', top: '150px' }}>
+                  <div className="absolute" style={{ left: '525px', top: '155px' }}>
                     <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                       <div className="flex items-center mb-2">
                         <TrendingUp size={18} className="text-[#009C9F] mr-2" />
@@ -174,7 +174,7 @@ const About = () => {
                   </div>
                   
                   {/* Q2-2026 - Below road */}
-                  <div className="absolute" style={{ left: '565px', top: '395px' }}>
+                  <div className="absolute" style={{ left: '545px', top: '395px' }}>
                     <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                       <div className="flex items-center mb-2">
                         <Users size={18} className="text-[#009C9F] mr-2" />
@@ -187,7 +187,7 @@ const About = () => {
                   </div>
                   
                   {/* Q3-2026 - Above road */}
-                  <div className="absolute" style={{ left: '915px', top: '160px' }}>
+                  <div className="absolute" style={{ left: '915px', top: '165px' }}>
                     <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                       <div className="flex items-center mb-2">
                         <Award size={18} className="text-[#009C9F] mr-2" />
