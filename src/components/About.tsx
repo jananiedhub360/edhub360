@@ -147,71 +147,70 @@ const About = () => {
                   </div>
                 </div>
 
-               {/* Q4-2025 - Below road */}
-                <div className="absolute" style={{ left: '345px', top: '420px' }}>
-                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div className="flex items-center mb-2">
-                      <Globe size={18} className="text-[#009C9F] mr-2" />
-                      <h4 className="text-sm font-bold text-[#00446E]">Q4-2025</h4>
+                 {/* Q4-2025 - Below road */}
+                  <div className="absolute" style={{ left: '345px', top: '420px' }}>
+                    <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                      <div className="flex items-center mb-2">
+                        <Globe size={18} className="text-[#009C9F] mr-2" />
+                        <h4 className="text-sm font-bold text-[#00446E]">Q4-2025</h4>
+                      </div>
+                      <p className="text-gray-700 text-sm leading-tight">
+                        Global Reach Across Diverse Geographies
+                      </p>
                     </div>
-                    <p className="text-gray-700 text-sm leading-tight">
-                      Global Reach Across Diverse Geographies
-                    </p>
                   </div>
-                </div>
-
-                {/* Q1-2026 - Above road */}
-                <div className="absolute" style={{ left: '595px', top: '130px' }}>
-                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div className="flex items-center mb-2">
-                      <TrendingUp size={18} className="text-[#009C9F] mr-2" />
-                      <h4 className="text-sm font-bold text-[#00446E]">Q1–2026</h4>
+  
+                  {/* Q1-2026 - Above road */}
+                  <div className="absolute" style={{ left: '595px', top: '130px' }}>
+                    <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                      <div className="flex items-center mb-2">
+                        <TrendingUp size={18} className="text-[#009C9F] mr-2" />
+                        <h4 className="text-sm font-bold text-[#00446E]">Q1–2026</h4>
+                      </div>
+                      <p className="text-gray-700 text-sm leading-tight">
+                        Professional Development and Upskilling
+                      </p>
                     </div>
-                    <p className="text-gray-700 text-sm leading-tight">
-                      Professional Development and Upskilling
-                    </p>
                   </div>
-                </div>
-                
-                {/* Q2-2026 - Below road */}
-                <div className="absolute" style={{ left: '860px', top: '430px' }}>
-                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div className="flex items-center mb-2">
-                      <Users size={18} className="text-[#009C9F] mr-2" />
-                      <h4 className="text-sm font-bold text-[#00446E]">Q2–2026</h4>
+                  
+                  {/* Q2-2026 - Below road */}
+                  <div className="absolute" style={{ left: '860px', top: '430px' }}>
+                    <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                      <div className="flex items-center mb-2">
+                        <Users size={18} className="text-[#009C9F] mr-2" />
+                        <h4 className="text-sm font-bold text-[#00446E]">Q2–2026</h4>
+                      </div>
+                      <p className="text-gray-700 text-sm leading-tight">
+                        EdHub Community
+                      </p>
                     </div>
-                    <p className="text-gray-700 text-sm leading-tight">
-                      EdHub Community
-                    </p>
                   </div>
-                </div>
-                
-                {/* Q3-2026 - Above road */}
-                <div className="absolute" style={{ left: '1105px', top: '130px' }}>
-                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div className="flex items-center mb-2">
-                      <Award size={18} className="text-[#009C9F] mr-2" />
-                      <h4 className="text-sm font-bold text-[#00446E]">Q3–2026</h4>
+                  
+                  {/* Q3-2026 - Above road */}
+                  <div className="absolute" style={{ left: '1105px', top: '130px' }}>
+                    <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                      <div className="flex items-center mb-2">
+                        <Award size={18} className="text-[#009C9F] mr-2" />
+                        <h4 className="text-sm font-bold text-[#00446E]">Q3–2026</h4>
+                      </div>
+                      <p className="text-gray-700 text-sm leading-tight">
+                        Engage with Industry Experts
+                      </p>
                     </div>
-                    <p className="text-gray-700 text-sm leading-tight">
-                      Engage with Industry Experts
-                    </p>
                   </div>
-                </div>
-                
-                {/* Q4-2026 - Below road */}
-                <div className="absolute" style={{ left: '1315px', top: '400px' }}>
-                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div className="flex items-center mb-2">
-                      <Brain size={18} className="text-[#009C9F] mr-2" />
-                      <h4 className="text-sm font-bold text-[#00446E]">Q4–2026</h4>
+                  
+                  {/* Q4-2026 - Below road */}
+                  <div className="absolute" style={{ left: '1315px', top: '400px' }}>
+                    <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                      <div className="flex items-center mb-2">
+                        <Brain size={18} className="text-[#009C9F] mr-2" />
+                        <h4 className="text-sm font-bold text-[#00446E]">Q4–2026</h4>
+                      </div>
+                      <p className="text-gray-700 text-sm leading-tight">
+                        Future Vision: AI-Powered Interactive Learning Bots
+                      </p>
                     </div>
-                    <p className="text-gray-700 text-sm leading-tight">
-                      Future Vision: AI-Powered Interactive Learning Bots
-                    </p>
                   </div>
-                </div>
-
 
             {/* Tablet Roadmap - Horizontal Scrollable */}
             <div className="hidden md:block lg:hidden">
