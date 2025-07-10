@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({ currentView, onNavigate }) => {
             <img 
               src="/logo.png" 
               alt="EDHUB360 Logo" 
-              className="h-12 w-auto"
+              className="h-16 w-auto"
             />
             <div className="flex flex-col">
               <span className="text-2xl font-bold text-[#00446E] font-heading leading-tight">
