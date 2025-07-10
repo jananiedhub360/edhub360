@@ -137,68 +137,68 @@ const About = () => {
               {/* Milestones */}
               <div className="absolute inset-0">
                 {/* Q3-2025 - Above road */}
-                <div className="absolute" style={{ left: '100px', top: '80px' }}>
-                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 max-w-xs">
+                <div className="absolute" style={{ left: '115px', top: '120px' }}>
+                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-3 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 w-32">
                     <div className="flex items-center mb-2">
-                      <GraduationCap size={20} className="text-[#009C9F] mr-2" />
-                      <h4 className="text-lg font-bold text-[#00446E]">Q3-2025</h4>
+                      <GraduationCap size={16} className="text-[#009C9F] mr-1" />
+                      <h4 className="text-sm font-bold text-[#00446E]">Q3-2025</h4>
                     </div>
-                    <p className="text-gray-700 text-sm leading-relaxed">Specialized Courses in Technology, Finance, and Legal</p>
+                    <p className="text-gray-700 text-xs leading-tight">Specialized Courses in Technology, Finance, and Legal</p>
                   </div>
                 </div>
 
                 {/* Q4-2025 - Below road */}
-                <div className="absolute" style={{ left: '350px', top: '480px' }}>
-                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 max-w-xs">
+                <div className="absolute" style={{ left: '365px', top: '440px' }}>
+                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-3 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 w-32">
                     <div className="flex items-center mb-2">
-                      <Globe size={20} className="text-[#009C9F] mr-2" />
-                      <h4 className="text-lg font-bold text-[#00446E]">Q4-2025</h4>
+                      <Globe size={16} className="text-[#009C9F] mr-1" />
+                      <h4 className="text-sm font-bold text-[#00446E]">Q4-2025</h4>
                     </div>
-                    <p className="text-gray-700 text-sm leading-relaxed">Global Reach Across Diverse Geographies</p>
+                    <p className="text-gray-700 text-xs leading-tight">Global Reach Across Diverse Geographies</p>
                   </div>
                 </div>
 
                 {/* Q1-2026 - Above road */}
-                <div className="absolute" style={{ left: '600px', top: '80px' }}>
-                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 max-w-xs">
+                <div className="absolute" style={{ left: '615px', top: '120px' }}>
+                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-3 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 w-32">
                     <div className="flex items-center mb-2">
-                      <TrendingUp size={20} className="text-[#009C9F] mr-2" />
-                      <h4 className="text-lg font-bold text-[#00446E]">Q1-2026</h4>
+                      <TrendingUp size={16} className="text-[#009C9F] mr-1" />
+                      <h4 className="text-sm font-bold text-[#00446E]">Q1-2026</h4>
                     </div>
-                    <p className="text-gray-700 text-sm leading-relaxed">Professional Development and Upskilling</p>
+                    <p className="text-gray-700 text-xs leading-tight">Professional Development and Upskilling</p>
                   </div>
                 </div>
 
                 {/* Q2-2026 - Below road */}
-                <div className="absolute" style={{ left: '850px', top: '480px' }}>
-                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 max-w-xs">
+                <div className="absolute" style={{ left: '865px', top: '440px' }}>
+                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-3 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 w-32">
                     <div className="flex items-center mb-2">
-                      <Users size={20} className="text-[#009C9F] mr-2" />
-                      <h4 className="text-lg font-bold text-[#00446E]">Q2-2026</h4>
+                      <Users size={16} className="text-[#009C9F] mr-1" />
+                      <h4 className="text-sm font-bold text-[#00446E]">Q2-2026</h4>
                     </div>
-                    <p className="text-gray-700 text-sm leading-relaxed">EdHub Community</p>
+                    <p className="text-gray-700 text-xs leading-tight">EdHub Community</p>
                   </div>
                 </div>
 
                 {/* Q3-2026 - Above road */}
-                <div className="absolute" style={{ left: '1100px', top: '80px' }}>
-                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 max-w-xs">
+                <div className="absolute" style={{ left: '1115px', top: '120px' }}>
+                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-3 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 w-32">
                     <div className="flex items-center mb-2">
-                      <Award size={20} className="text-[#009C9F] mr-2" />
-                      <h4 className="text-lg font-bold text-[#00446E]">Q3-2026</h4>
+                      <Award size={16} className="text-[#009C9F] mr-1" />
+                      <h4 className="text-sm font-bold text-[#00446E]">Q3-2026</h4>
                     </div>
-                    <p className="text-gray-700 text-sm leading-relaxed">Engage with Industry Experts</p>
+                    <p className="text-gray-700 text-xs leading-tight">Engage with Industry Experts</p>
                   </div>
                 </div>
 
                 {/* Q4-2026 - Below road */}
-                <div className="absolute" style={{ left: '1325px', top: '430px' }}>
-                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 max-w-xs">
+                <div className="absolute" style={{ left: '1340px', top: '390px' }}>
+                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-3 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 w-32">
                     <div className="flex items-center mb-2">
-                      <Brain size={20} className="text-[#009C9F] mr-2" />
-                      <h4 className="text-lg font-bold text-[#00446E]">Q4-2026</h4>
+                      <Brain size={16} className="text-[#009C9F] mr-1" />
+                      <h4 className="text-sm font-bold text-[#00446E]">Q4-2026</h4>
                     </div>
-                    <p className="text-gray-700 text-sm leading-relaxed">Future Vision: AI-Powered Interactive Learning Bots</p>
+                    <p className="text-gray-700 text-xs leading-tight">Future Vision: AI-Powered Interactive Learning Bots</p>
                   </div>
                 </div>
               </div>
