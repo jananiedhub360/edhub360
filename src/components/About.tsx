@@ -131,7 +131,7 @@ const About = () => {
                 <circle cx="675" cy="225" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
                 <circle cx="925" cy="425" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
                 <circle cx="1175" cy="225" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
-                <circle cx="1400" cy="375" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
+                <circle cx="1400" cy="425" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
               </svg>
 
               {/* Milestones */}
@@ -200,7 +200,7 @@ const About = () => {
                   </div>
                   
                   {/* Q4-2026 - Below road */}
-                  <div className="absolute" style={{ left: '1015px', top: '420px' }}>
+                  <div className="absolute" style={{ left: '975px', top: '420px' }}>
                     <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                       <div className="flex items-center mb-2">
                         <Brain size={18} className="text-[#009C9F] mr-2" />
