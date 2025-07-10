@@ -211,7 +211,9 @@ const About = () => {
                       </p>
                     </div>
                   </div>
-
+                </div>
+              </div>
+                
             {/* Tablet Roadmap - Horizontal Scrollable */}
             <div className="hidden md:block lg:hidden">
               <div className="flex space-x-8 pb-4 overflow-x-auto">
