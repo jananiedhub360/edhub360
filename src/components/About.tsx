@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, Eye, Heart, Award, Users, Calendar, Lightbulb, Telescope } from 'lucide-react';
+import { Target, Eye, Heart, Award, Users, Calendar, Lightbulb, Telescope, GraduationCap, Globe, TrendingUp, Brain } from 'lucide-react';
 
 const About = () => {
   return (
@@ -96,103 +96,197 @@ const About = () => {
         {/* Roadmap */}
         <div>
           <h3 className="text-3xl font-bold text-[#00446E] mb-12 text-center">Our Strategic Direction</h3>
-          <div className="relative max-w-3xl mx-auto">
-            {/* Desktop Timeline */}
-            <div className="hidden md:block">
-              {/* Vertical Timeline Line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-[#009C9F] to-[#BEA260]"></div>
-              
-              {/* Timeline Steps */}
-              <div className="space-y-8">
-                {/* Step 1 */}
-                <div className="relative flex items-center">
-                  <div className="w-1/2 pr-6 text-right">
-                    <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                      <h4 className="text-lg font-bold text-[#00446E] mb-2 text-right">Q3-2025</h4>
-                      <p className="text-gray-700 leading-relaxed text-sm">Specialized Courses in Technology, Finance, and Legal</p>
+          
+          {/* Curved Road Roadmap */}
+          <div className="relative max-w-6xl mx-auto overflow-x-auto">
+            {/* Desktop Roadmap */}
+            <div className="hidden lg:block relative min-h-[600px] py-8">
+              {/* Curved Road Path */}
+              <svg 
+                className="absolute inset-0 w-full h-full" 
+                viewBox="0 0 1200 600" 
+                preserveAspectRatio="xMidYMid meet"
+              >
+                {/* Main Road Path */}
+                <path
+                  d="M 50 300 Q 200 150 350 300 T 650 300 Q 800 450 950 300 Q 1050 200 1150 300"
+                  stroke="#374151"
+                  strokeWidth="24"
+                  fill="none"
+                  className="drop-shadow-sm"
+                />
+                {/* Dashed Center Line */}
+                <path
+                  d="M 50 300 Q 200 150 350 300 T 650 300 Q 800 450 950 300 Q 1050 200 1150 300"
+                  stroke="#BEA260"
+                  strokeWidth="3"
+                  fill="none"
+                  strokeDasharray="15,10"
+                  className="opacity-80"
+                />
+              </svg>
+
+              {/* Milestones */}
+              <div className="absolute inset-0">
+                {/* Q3-2025 - Above road */}
+                <div className="absolute" style={{ left: '50px', top: '120px' }}>
+                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 max-w-xs">
+                    <div className="flex items-center mb-2">
+                      <GraduationCap size={20} className="text-[#009C9F] mr-2" />
+                      <h4 className="text-lg font-bold text-[#00446E]">Q3-2025</h4>
                     </div>
+                    <p className="text-gray-700 text-sm leading-relaxed">Specialized Courses in Technology, Finance, and Legal</p>
                   </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-[#BEA260] rounded-full border-3 border-white shadow-lg z-10"></div>
-                  <div className="w-1/2 pl-6"></div>
+                  {/* Connection dot */}
+                  <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-4 w-4 h-4 bg-[#BEA260] rounded-full border-2 border-white shadow-lg"></div>
                 </div>
 
-                {/* Step 2 */}
-                <div className="relative flex items-center">
-                  <div className="w-1/2 pr-6"></div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-[#BEA260] rounded-full border-3 border-white shadow-lg z-10"></div>
-                  <div className="w-1/2 pl-6">
-                    <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                      <h4 className="text-lg font-bold text-[#00446E] mb-2">Q4-2025</h4>
-                      <p className="text-gray-700 leading-relaxed text-sm">Global Reach Across Diverse Geographies</p>
+                {/* Q4-2025 - Below road */}
+                <div className="absolute" style={{ left: '200px', top: '380px' }}>
+                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 max-w-xs">
+                    <div className="flex items-center mb-2">
+                      <Globe size={20} className="text-[#009C9F] mr-2" />
+                      <h4 className="text-lg font-bold text-[#00446E]">Q4-2025</h4>
                     </div>
+                    <p className="text-gray-700 text-sm leading-relaxed">Global Reach Across Diverse Geographies</p>
                   </div>
+                  {/* Connection dot */}
+                  <div className="absolute left-1/2 transform -translate-x-1/2 -top-6 w-4 h-4 bg-[#BEA260] rounded-full border-2 border-white shadow-lg"></div>
                 </div>
 
-                {/* Step 3 */}
-                <div className="relative flex items-center">
-                  <div className="w-1/2 pr-6 text-right">
-                    <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                      <h4 className="text-lg font-bold text-[#00446E] mb-2 text-right">Q1-2026</h4>
-                      <p className="text-gray-700 leading-relaxed text-sm">Continuous Professional Development and Upskilling</p>
+                {/* Q1-2026 - Above road */}
+                <div className="absolute" style={{ left: '350px', top: '120px' }}>
+                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 max-w-xs">
+                    <div className="flex items-center mb-2">
+                      <TrendingUp size={20} className="text-[#009C9F] mr-2" />
+                      <h4 className="text-lg font-bold text-[#00446E]">Q1-2026</h4>
                     </div>
+                    <p className="text-gray-700 text-sm leading-relaxed">Professional Development and Upskilling</p>
                   </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-[#BEA260] rounded-full border-3 border-white shadow-lg z-10"></div>
-                  <div className="w-1/2 pl-6"></div>
+                  {/* Connection dot */}
+                  <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-4 w-4 h-4 bg-[#BEA260] rounded-full border-2 border-white shadow-lg"></div>
                 </div>
 
-                {/* Step 4 */}
-                <div className="relative flex items-center">
-                  <div className="w-1/2 pr-6"></div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-[#BEA260] rounded-full border-3 border-white shadow-lg z-10"></div>
-                  <div className="w-1/2 pl-6">
-                    <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                      <h4 className="text-lg font-bold text-[#00446E] mb-2">Q2-2026</h4>
-                      <p className="text-gray-700 leading-relaxed text-sm">Collaborative and Inclusive Community-Based Learning</p>
+                {/* Q2-2026 - Below road */}
+                <div className="absolute" style={{ left: '500px', top: '380px' }}>
+                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 max-w-xs">
+                    <div className="flex items-center mb-2">
+                      <Users size={20} className="text-[#009C9F] mr-2" />
+                      <h4 className="text-lg font-bold text-[#00446E]">Q2-2026</h4>
                     </div>
+                    <p className="text-gray-700 text-sm leading-relaxed">EdHub Community</p>
                   </div>
+                  {/* Connection dot */}
+                  <div className="absolute left-1/2 transform -translate-x-1/2 -top-6 w-4 h-4 bg-[#BEA260] rounded-full border-2 border-white shadow-lg"></div>
                 </div>
 
-                {/* Step 5 */}
-                <div className="relative flex items-center">
-                  <div className="w-1/2 pr-6 text-right">
-                    <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                      <h4 className="text-lg font-bold text-[#00446E] mb-2 text-right">Q3-2026</h4>
-                      <p className="text-gray-700 leading-relaxed text-sm">Engage with Industry Experts</p>
+                {/* Q3-2026 - Above road */}
+                <div className="absolute" style={{ left: '700px', top: '120px' }}>
+                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 max-w-xs">
+                    <div className="flex items-center mb-2">
+                      <Award size={20} className="text-[#009C9F] mr-2" />
+                      <h4 className="text-lg font-bold text-[#00446E]">Q3-2026</h4>
                     </div>
+                    <p className="text-gray-700 text-sm leading-relaxed">Engage with Industry Experts</p>
                   </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-[#BEA260] rounded-full border-3 border-white shadow-lg z-10"></div>
-                  <div className="w-1/2 pl-6"></div>
+                  {/* Connection dot */}
+                  <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-4 w-4 h-4 bg-[#BEA260] rounded-full border-2 border-white shadow-lg"></div>
                 </div>
 
-                {/* Step 6 */}
-                <div className="relative flex items-center">
-                  <div className="w-1/2 pr-6"></div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-[#BEA260] rounded-full border-3 border-white shadow-lg z-10"></div>
-                  <div className="w-1/2 pl-6">
-                    <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                      <h4 className="text-lg font-bold text-[#00446E] mb-2">Q4-2026</h4>
-                      <p className="text-gray-700 leading-relaxed text-sm">Future Vision: AI-Powered Interactive Learning Bots</p>
+                {/* Q4-2026 - Below road */}
+                <div className="absolute" style={{ left: '900px', top: '380px' }}>
+                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 max-w-xs">
+                    <div className="flex items-center mb-2">
+                      <Brain size={20} className="text-[#009C9F] mr-2" />
+                      <h4 className="text-lg font-bold text-[#00446E]">Q4-2026</h4>
                     </div>
+                    <p className="text-gray-700 text-sm leading-relaxed">Future Vision: AI-Powered Interactive Learning Bots</p>
                   </div>
+                  {/* Connection dot */}
+                  <div className="absolute left-1/2 transform -translate-x-1/2 -top-6 w-4 h-4 bg-[#BEA260] rounded-full border-2 border-white shadow-lg"></div>
                 </div>
               </div>
             </div>
 
-            {/* Mobile Timeline - Stacked Layout */}
-            <div className="md:hidden space-y-4">
+            {/* Tablet Roadmap - Horizontal Scrollable */}
+            <div className="hidden md:block lg:hidden">
+              <div className="flex space-x-8 pb-4 overflow-x-auto">
+                {[
+                  { title: "Q3-2025", content: "Specialized Courses in Technology, Finance, and Legal", icon: GraduationCap },
+                  { title: "Q4-2025", content: "Global Reach Across Diverse Geographies", icon: Globe },
+                  { title: "Q1-2026", content: "Professional Development and Upskilling", icon: TrendingUp },
+                  { title: "Q2-2026", content: "EdHub Community", icon: Users },
+                  { title: "Q3-2026", content: "Engage with Industry Experts", icon: Award },
+                  { title: "Q4-2026", content: "Future Vision: AI-Powered Interactive Learning Bots", icon: Brain }
+                ].map((item, index) => {
+                  const IconComponent = item.icon;
+                  return (
+                    <div key={index} className="flex-shrink-0 w-72">
+                      <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                        <div className="flex items-center mb-2">
+                          <IconComponent size={20} className="text-[#009C9F] mr-2" />
+                          <h4 className="text-lg font-bold text-[#00446E]">{item.title}</h4>
+                        </div>
+                        <p className="text-gray-700 text-sm leading-relaxed">{item.content}</p>
+                      </div>
+                      {/* Road connector */}
+                      {index < 5 && (
+                        <div className="flex items-center justify-center mt-4">
+                          <div className="w-8 h-1 bg-[#374151] rounded"></div>
+                          <div className="w-2 h-2 bg-[#BEA260] rounded-full mx-2"></div>
+                          <div className="w-8 h-1 bg-[#374151] rounded"></div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Mobile Roadmap - Vertical Wave */}
+            <div className="md:hidden space-y-6">
               {[
-                { title: "Q3-2025", content: "Specialized Courses in Technology, Finance, and Legal" },
-                { title: "Q4-2025", content: "Global Reach Across Diverse Geographies" },
-                { title: "Q1-2026", content: "Continuous Professional Development and Upskilling" },
-                { title: "Q2-2026", content: "Collaborative and Inclusive Community-Based Learning" },
-                { title: "Q3-2026", content: "Engage with Industry Experts" },
-                { title: "Q4-2026", content: "Future Vision: AI-Powered Interactive Learning Bots" }
-              ].map((item, index) => (
-                <div key={index} className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg">
-                  <h4 className="text-lg font-bold text-[#00446E] mb-2">{item.title}</h4>
-                  <p className="text-gray-700 leading-relaxed text-sm">{item.content}</p>
-                </div>
-              ))}
+                { title: "Q3-2025", content: "Specialized Courses in Technology, Finance, and Legal", icon: GraduationCap },
+                { title: "Q4-2025", content: "Global Reach Across Diverse Geographies", icon: Globe },
+                { title: "Q1-2026", content: "Professional Development and Upskilling", icon: TrendingUp },
+                { title: "Q2-2026", content: "EdHub Community", icon: Users },
+                { title: "Q3-2026", content: "Engage with Industry Experts", icon: Award },
+                { title: "Q4-2026", content: "Future Vision: AI-Powered Interactive Learning Bots", icon: Brain }
+              ].map((item, index) => {
+                const IconComponent = item.icon;
+                const isEven = index % 2 === 0;
+                return (
+                  <div key={index} className={`flex items-center ${isEven ? 'flex-row' : 'flex-row-reverse'}`}>
+                    <div className={`flex-1 ${isEven ? 'pr-4' : 'pl-4'}`}>
+                      <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg">
+                        <div className="flex items-center mb-2">
+                          <IconComponent size={20} className="text-[#009C9F] mr-2" />
+                          <h4 className="text-lg font-bold text-[#00446E]">{item.title}</h4>
+                        </div>
+                        <p className="text-gray-700 text-sm leading-relaxed">{item.content}</p>
+                      </div>
+                    </div>
+                    <div className="flex-shrink-0">
+                      <div className="w-4 h-4 bg-[#BEA260] rounded-full border-2 border-white shadow-lg"></div>
+                    </div>
+                    <div className="flex-1">
+                      {/* Curved connector line */}
+                      {index < 5 && (
+                        <svg className="w-full h-16" viewBox="0 0 100 60">
+                          <path
+                            d={isEven ? "M 0 30 Q 50 10 100 30" : "M 0 30 Q 50 50 100 30"}
+                            stroke="#374151"
+                            strokeWidth="3"
+                            fill="none"
+                            strokeDasharray="5,3"
+                            className="opacity-60"
+                          />
+                        </svg>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
