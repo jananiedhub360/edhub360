@@ -147,14 +147,16 @@ const About = () => {
                   </div>
                 </div>
 
-                {/* Q4-2025 - Below road */}
-                <div className="absolute" style={{ left: '365px', top: '440px' }}>
-                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-3 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 w-32">
+               {/* Q4-2025 - Below road */}
+                <div className="absolute" style={{ left: '345px', top: '420px' }}>
+                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                     <div className="flex items-center mb-2">
-                      <Globe size={16} className="text-[#009C9F] mr-1" />
+                      <Globe size={18} className="text-[#009C9F] mr-2" />
                       <h4 className="text-sm font-bold text-[#00446E]">Q4-2025</h4>
                     </div>
-                    <p className="text-gray-700 text-xs leading-tight">Global Reach Across Diverse Geographies</p>
+                    <p className="text-gray-700 text-sm leading-tight">
+                      Global Reach Across Diverse Geographies
+                    </p>
                   </div>
                 </div>
 
