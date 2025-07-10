@@ -291,10 +291,10 @@ const About = () => {
                   </div>
                 );
               })}
-            </div>
-          </div>
-        </div>
-      </div> {/* closes max-w-7xl */}
+             </div> {/* closes md:hidden space-y-6 */}
+          </div> {/* closes .relative max-w-7xl mx-auto */}
+        </div> {/* closes Roadmap */}
+      </div> {/* closes max-w-7xl container */}
     </section>
   );
 };
