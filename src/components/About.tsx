@@ -96,127 +96,161 @@ const About = () => {
         {/* Roadmap */}
         <div>
           <h3 className="text-3xl font-bold text-[#00446E] mb-1 text-center">Our Strategic Direction</h3>
-          
-          {/* Curved Road Roadmap */}
-          <div className="relative max-w-7xl mx-auto overflow-x-auto">
-            {/* Desktop Roadmap */}
-            <div className="hidden lg:block relative min-h-[650px] py-8">
-              {/* Curved Road Path */}
-              <svg 
-                className="absolute inset-0 w-full h-full" 
-                viewBox="0 0 1500 650" 
-                preserveAspectRatio="xMidYMid meet"
-              >
-                {/* Main Road Path */}
-                <path
-                  d="M 50 325 Q 175 225 300 325 Q 425 425 550 325 Q 675 225 800 325 Q 925 425 1050 325 Q 1175 225 1300 325 Q 1400 375 1450 325"
-                  stroke="#374151"
-                  strokeWidth="24"
-                  fill="none"
-                  className="drop-shadow-sm"
-                />
-                {/* Dashed Center Line */}
-                <path
-                  d="M 50 325 Q 175 225 300 325 Q 425 425 550 325 Q 675 225 800 325 Q 925 425 1050 325 Q 1175 225 1300 325 Q 1400 375 1450 325"
-                  stroke="#BEA260"
-                  strokeWidth="3"
-                  fill="none"
-                  strokeDasharray="15,10"
-                  className="opacity-80"
-                />
-                
-                {/* Milestone Dots at Exact Curve Points */}
-                <circle cx="175" cy="250" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
-                <circle cx="425" cy="400" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
-                <circle cx="675" cy="250" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
-                <circle cx="925" cy="400" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
-                <circle cx="1175" cy="250" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
-                <circle cx="1400" cy="400" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
-              </svg>
-
-              {/* Milestones */}
-              <div className="absolute inset-0">
-                {/* Q3-2025 - Above road */}
-                <div className="absolute" style={{ left: '115px', top: '155px' }}>
-                  <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div className="flex items-center mb-2">
-                      <GraduationCap size={18} className="text-[#009C9F] mr-2" />
-                      <h4 className="text-sm font-bold text-[#00446E]">Q3-2025</h4>
-                    </div>
-                    <p className="text-gray-700 text-sm leading-tight">Specilized Courses in Technology, Finance & Legal</p>
-                  </div>
-                </div>
-
-                {/* Q4-2025 - Below road */}
-                  <div className="absolute" style={{ left: '145px', top: '395px' }}>
+          <div className="relative -mt-8">
+            {/* Curved Road Roadmap */}
+            <div className="relative max-w-7xl mx-auto overflow-x-auto">
+              {/* Desktop Roadmap */}
+              <div className="hidden lg:block relative min-h-[650px] py-8">
+                {/* Curved Road Path */}
+                <svg 
+                  className="absolute inset-0 w-full h-full" 
+                  viewBox="0 0 1500 650" 
+                  preserveAspectRatio="xMidYMid meet"
+                >
+                  {/* Main Road Path */}
+                  <path
+                    d="M 50 325 Q 175 225 300 325 Q 425 425 550 325 Q 675 225 800 325 Q 925 425 1050 325 Q 1175 225 1300 325 Q 1400 375 1450 325"
+                    stroke="#374151"
+                    strokeWidth="24"
+                    fill="none"
+                    className="drop-shadow-sm"
+                  />
+                  {/* Dashed Center Line */}
+                  <path
+                    d="M 50 325 Q 175 225 300 325 Q 425 425 550 325 Q 675 225 800 325 Q 925 425 1050 325 Q 1175 225 1300 325 Q 1400 375 1450 325"
+                    stroke="#BEA260"
+                    strokeWidth="3"
+                    fill="none"
+                    strokeDasharray="15,10"
+                    className="opacity-80"
+                  />
+                  
+                  {/* Milestone Dots at Exact Curve Points */}
+                  <circle cx="175" cy="250" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
+                  <circle cx="425" cy="400" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
+                  <circle cx="675" cy="250" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
+                  <circle cx="925" cy="400" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
+                  <circle cx="1175" cy="250" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
+                  <circle cx="1400" cy="400" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
+                </svg>
+  
+                {/* Milestones */}
+                <div className="absolute inset-0">
+                  {/* Q3-2025 - Above road */}
+                  <div className="absolute" style={{ left: '115px', top: '155px' }}>
                     <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                       <div className="flex items-center mb-2">
-                        <Globe size={18} className="text-[#009C9F] mr-2" />
-                        <h4 className="text-sm font-bold text-[#00446E]">Q4-2025</h4>
+                        <GraduationCap size={18} className="text-[#009C9F] mr-2" />
+                        <h4 className="text-sm font-bold text-[#00446E]">Q3-2025</h4>
                       </div>
-                      <p className="text-gray-700 text-sm leading-tight">
-                        Global Reach Across Diverse Geographies
-                      </p>
+                      <p className="text-gray-700 text-sm leading-tight">Specilized Courses in Technology, Finance & Legal</p>
                     </div>
                   </div>
   
-                {/* Q1-2026 - Above road */}
-                  <div className="absolute" style={{ left: '525px', top: '155px' }}>
-                    <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                      <div className="flex items-center mb-2">
-                        <TrendingUp size={18} className="text-[#009C9F] mr-2" />
-                        <h4 className="text-sm font-bold text-[#00446E]">Q1–2026</h4>
+                  {/* Q4-2025 - Below road */}
+                    <div className="absolute" style={{ left: '145px', top: '395px' }}>
+                      <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                        <div className="flex items-center mb-2">
+                          <Globe size={18} className="text-[#009C9F] mr-2" />
+                          <h4 className="text-sm font-bold text-[#00446E]">Q4-2025</h4>
+                        </div>
+                        <p className="text-gray-700 text-sm leading-tight">
+                          Global Reach Across Diverse Geographies
+                        </p>
                       </div>
-                      <p className="text-gray-700 text-sm leading-tight">
-                        Professional Development and Upskilling
-                      </p>
                     </div>
-                  </div>
-                  
-                  {/* Q2-2026 - Below road */}
-                  <div className="absolute" style={{ left: '545px', top: '395px' }}>
-                    <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                      <div className="flex items-center mb-2">
-                        <Users size={18} className="text-[#009C9F] mr-2" />
-                        <h4 className="text-sm font-bold text-[#00446E]">Q2–2026</h4>
+    
+                  {/* Q1-2026 - Above road */}
+                    <div className="absolute" style={{ left: '525px', top: '155px' }}>
+                      <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                        <div className="flex items-center mb-2">
+                          <TrendingUp size={18} className="text-[#009C9F] mr-2" />
+                          <h4 className="text-sm font-bold text-[#00446E]">Q1–2026</h4>
+                        </div>
+                        <p className="text-gray-700 text-sm leading-tight">
+                          Professional Development and Upskilling
+                        </p>
                       </div>
-                      <p className="text-gray-700 text-sm leading-tight">
-                        EdHub Community
-                      </p>
                     </div>
-                  </div>
-                  
-                  {/* Q3-2026 - Above road */}
-                  <div className="absolute" style={{ left: '915px', top: '165px' }}>
-                    <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                      <div className="flex items-center mb-2">
-                        <Award size={18} className="text-[#009C9F] mr-2" />
-                        <h4 className="text-sm font-bold text-[#00446E]">Q3–2026</h4>
+                    
+                    {/* Q2-2026 - Below road */}
+                    <div className="absolute" style={{ left: '545px', top: '395px' }}>
+                      <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                        <div className="flex items-center mb-2">
+                          <Users size={18} className="text-[#009C9F] mr-2" />
+                          <h4 className="text-sm font-bold text-[#00446E]">Q2–2026</h4>
+                        </div>
+                        <p className="text-gray-700 text-sm leading-tight">
+                          EdHub Community
+                        </p>
                       </div>
-                      <p className="text-gray-700 text-sm leading-tight">
-                        Engage with Industry Experts
-                      </p>
                     </div>
-                  </div>
-                  
-                  {/* Q4-2026 - Below road */}
-                  <div className="absolute" style={{ left: '935px', top: '395px' }}>
-                    <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                      <div className="flex items-center mb-2">
-                        <Brain size={18} className="text-[#009C9F] mr-2" />
-                        <h4 className="text-sm font-bold text-[#00446E]">Q4–2026</h4>
+                    
+                    {/* Q3-2026 - Above road */}
+                    <div className="absolute" style={{ left: '915px', top: '165px' }}>
+                      <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                        <div className="flex items-center mb-2">
+                          <Award size={18} className="text-[#009C9F] mr-2" />
+                          <h4 className="text-sm font-bold text-[#00446E]">Q3–2026</h4>
+                        </div>
+                        <p className="text-gray-700 text-sm leading-tight">
+                          Engage with Industry Experts
+                        </p>
                       </div>
-                      <p className="text-gray-700 text-sm leading-tight">
-                        Future Vision: AI-Powered Interactive Learning Bots
-                      </p>
+                    </div>
+                    
+                    {/* Q4-2026 - Below road */}
+                    <div className="absolute" style={{ left: '935px', top: '395px' }}>
+                      <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                        <div className="flex items-center mb-2">
+                          <Brain size={18} className="text-[#009C9F] mr-2" />
+                          <h4 className="text-sm font-bold text-[#00446E]">Q4–2026</h4>
+                        </div>
+                        <p className="text-gray-700 text-sm leading-tight">
+                          Future Vision: AI-Powered Interactive Learning Bots
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
+                  
+              {/* Tablet Roadmap - Horizontal Scrollable */}
+              <div className="hidden md:block lg:hidden">
+                <div className="flex space-x-8 pb-4 overflow-x-auto">
+                  {[
+                    { title: "Q3-2025", content: "Specialized Courses in Technology, Finance, and Legal", icon: GraduationCap },
+                    { title: "Q4-2025", content: "Global Reach Across Diverse Geographies", icon: Globe },
+                    { title: "Q1-2026", content: "Professional Development and Upskilling", icon: TrendingUp },
+                    { title: "Q2-2026", content: "EdHub Community", icon: Users },
+                    { title: "Q3-2026", content: "Engage with Industry Experts", icon: Award },
+                    { title: "Q4-2026", content: "Future Vision: AI-Powered Interactive Learning Bots", icon: Brain }
+                  ].map((item, index) => {
+                    const IconComponent = item.icon;
+                    return (
+                      <div key={index} className="flex-shrink-0 w-72">
+                        <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                          <div className="flex items-center mb-2">
+                            <IconComponent size={20} className="text-[#009C9F] mr-2" />
+                            <h4 className="text-lg font-bold text-[#00446E]">{item.title}</h4>
+                          </div>
+                          <p className="text-gray-700 text-sm leading-relaxed">{item.content}</p>
+                        </div>
+                        {/* Road connector */}
+                        {index < 5 && (
+                          <div className="flex items-center justify-center mt-4">
+                            <div className="w-8 h-1 bg-[#374151] rounded"></div>
+                            <div className="w-2 h-2 bg-[#BEA260] rounded-full mx-2"></div>
+                            <div className="w-8 h-1 bg-[#374151] rounded"></div>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
-                
-            {/* Tablet Roadmap - Horizontal Scrollable */}
-            <div className="hidden md:block lg:hidden">
-              <div className="flex space-x-8 pb-4 overflow-x-auto">
+  
+              {/* Mobile Roadmap - Vertical Wave */}
+              <div className="md:hidden space-y-6">
                 {[
                   { title: "Q3-2025", content: "Specialized Courses in Technology, Finance, and Legal", icon: GraduationCap },
                   { title: "Q4-2025", content: "Global Reach Across Diverse Geographies", icon: Globe },
@@ -226,75 +260,42 @@ const About = () => {
                   { title: "Q4-2026", content: "Future Vision: AI-Powered Interactive Learning Bots", icon: Brain }
                 ].map((item, index) => {
                   const IconComponent = item.icon;
+                  const isEven = index % 2 === 0;
                   return (
-                    <div key={index} className="flex-shrink-0 w-72">
-                      <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                        <div className="flex items-center mb-2">
-                          <IconComponent size={20} className="text-[#009C9F] mr-2" />
-                          <h4 className="text-lg font-bold text-[#00446E]">{item.title}</h4>
+                    <div key={index} className={`flex items-center ${isEven ? 'flex-row' : 'flex-row-reverse'}`}>
+                      <div className={`flex-1 ${isEven ? 'pr-4' : 'pl-4'}`}>
+                        <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg">
+                          <div className="flex items-center mb-2">
+                            <IconComponent size={20} className="text-[#009C9F] mr-2" />
+                            <h4 className="text-lg font-bold text-[#00446E]">{item.title}</h4>
+                          </div>
+                          <p className="text-gray-700 text-sm leading-relaxed">{item.content}</p>
                         </div>
-                        <p className="text-gray-700 text-sm leading-relaxed">{item.content}</p>
                       </div>
-                      {/* Road connector */}
-                      {index < 5 && (
-                        <div className="flex items-center justify-center mt-4">
-                          <div className="w-8 h-1 bg-[#374151] rounded"></div>
-                          <div className="w-2 h-2 bg-[#BEA260] rounded-full mx-2"></div>
-                          <div className="w-8 h-1 bg-[#374151] rounded"></div>
-                        </div>
-                      )}
+                      <div className="flex-shrink-0">
+                        <div className="w-4 h-4 bg-[#BEA260] rounded-full border-2 border-white shadow-lg"></div>
+                      </div>
+                      <div className="flex-1">
+                        {/* Curved connector line */}
+                        {index < 5 && (
+                          <svg className="w-full h-16" viewBox="0 0 100 60">
+                            <path
+                              d={isEven ? "M 0 30 Q 50 10 100 30" : "M 0 30 Q 50 50 100 30"}
+                              stroke="#374151"
+                              strokeWidth="3"
+                              fill="none"
+                              strokeDasharray="5,3"
+                              className="opacity-60"
+                            />
+                          </svg>
+                        )}
+                      </div>
                     </div>
                   );
                 })}
+                </div> 
               </div>
             </div>
-
-            {/* Mobile Roadmap - Vertical Wave */}
-            <div className="md:hidden space-y-6">
-              {[
-                { title: "Q3-2025", content: "Specialized Courses in Technology, Finance, and Legal", icon: GraduationCap },
-                { title: "Q4-2025", content: "Global Reach Across Diverse Geographies", icon: Globe },
-                { title: "Q1-2026", content: "Professional Development and Upskilling", icon: TrendingUp },
-                { title: "Q2-2026", content: "EdHub Community", icon: Users },
-                { title: "Q3-2026", content: "Engage with Industry Experts", icon: Award },
-                { title: "Q4-2026", content: "Future Vision: AI-Powered Interactive Learning Bots", icon: Brain }
-              ].map((item, index) => {
-                const IconComponent = item.icon;
-                const isEven = index % 2 === 0;
-                return (
-                  <div key={index} className={`flex items-center ${isEven ? 'flex-row' : 'flex-row-reverse'}`}>
-                    <div className={`flex-1 ${isEven ? 'pr-4' : 'pl-4'}`}>
-                      <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg">
-                        <div className="flex items-center mb-2">
-                          <IconComponent size={20} className="text-[#009C9F] mr-2" />
-                          <h4 className="text-lg font-bold text-[#00446E]">{item.title}</h4>
-                        </div>
-                        <p className="text-gray-700 text-sm leading-relaxed">{item.content}</p>
-                      </div>
-                    </div>
-                    <div className="flex-shrink-0">
-                      <div className="w-4 h-4 bg-[#BEA260] rounded-full border-2 border-white shadow-lg"></div>
-                    </div>
-                    <div className="flex-1">
-                      {/* Curved connector line */}
-                      {index < 5 && (
-                        <svg className="w-full h-16" viewBox="0 0 100 60">
-                          <path
-                            d={isEven ? "M 0 30 Q 50 10 100 30" : "M 0 30 Q 50 50 100 30"}
-                            stroke="#374151"
-                            strokeWidth="3"
-                            fill="none"
-                            strokeDasharray="5,3"
-                            className="opacity-60"
-                          />
-                        </svg>
-                      )}
-                    </div>
-                  </div>
-                );
-              })}
-              </div> 
-            </div> 
           </div>
         </div> 
       </section>
