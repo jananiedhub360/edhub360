@@ -72,11 +72,11 @@ const Hero: React.FC<HeroProps> = ({ onGetInTouch, onExploreSolutions }) => {
             </h1>
             
             <p className="text-xl sm:text-2xl mb-8 text-gray-200 font-light">
-              Tailored • Affordable • Transformative
+              Tailored • Affordable • Empowering
             </p>
             
             <p className="text-lg mb-10 text-gray-300 max-w-xl">
-              We build intelligent, user-focused learning solutions that empower individuals, educators, and organizations to grow—without being limited by outdated systems or high costs.
+              We build intelligent, user-focused learning solutions that transform individuals, educators, and organizations to grow—without being limited by outdated systems or high costs.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
