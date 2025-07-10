@@ -291,10 +291,11 @@ const About = () => {
                   </div>
                 );
               })}
-             </div> {/* closes md:hidden space-y-6 */}
-          </div> {/* closes .relative max-w-7xl mx-auto */}
-        </div> {/* closes Roadmap */}
-      </div> {/* closes max-w-7xl container */}
+              </div> {/* closes md:hidden space-y-6 */}
+            </div> {/* closes .absolute inset-0 */}
+          </div> {/* closes .relative min-h-[650px] py-8 */}
+        </div> {/* closes .relative max-w-7xl mx-auto */}
+      </div> {/* closes .max-w-7xl container */}
     </section>
   );
 };
