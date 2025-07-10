@@ -126,12 +126,12 @@ const About = () => {
                 />
                 
                 {/* Milestone Dots at Exact Curve Points */}
-                <circle cx="175" cy="205" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
-                <circle cx="425" cy="405" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
-                <circle cx="675" cy="205" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
-                <circle cx="925" cy="405" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
-                <circle cx="1175" cy="205" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
-                <circle cx="1400" cy="405" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
+                <circle cx="175" cy="245" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
+                <circle cx="425" cy="400" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
+                <circle cx="675" cy="245" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
+                <circle cx="925" cy="400" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
+                <circle cx="1175" cy="245" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
+                <circle cx="1400" cy="400" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
               </svg>
 
               {/* Milestones */}
