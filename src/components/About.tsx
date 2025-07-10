@@ -161,7 +161,7 @@ const About = () => {
                   </div>
   
                 {/* Q1-2026 - Above road */}
-                  <div className="absolute" style={{ left: '525px', top: '110px' }}>
+                  <div className="absolute" style={{ left: '495px', top: '110px' }}>
                     <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                       <div className="flex items-center mb-2">
                         <TrendingUp size={18} className="text-[#009C9F] mr-2" />
