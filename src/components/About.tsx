@@ -143,12 +143,12 @@ const About = () => {
                       <GraduationCap size={18} className="text-[#009C9F] mr-2" />
                       <h4 className="text-sm font-bold text-[#00446E]">Q3-2025</h4>
                     </div>
-                    <p className="text-gray-700 text-xs leading-tight">Specialized Courses in Technology, Finance, and Legal</p>
+                    <p className="text-gray-700 text-sm leading-tight">Specialized Courses in Technology, Finance, and Legal</p>
                   </div>
                 </div>
 
                 {/* Q4-2025 - Below road */}
-                  <div className="absolute" style={{ left: '245px', top: '420px' }}>
+                  <div className="absolute" style={{ left: '195px', top: '420px' }}>
                     <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                       <div className="flex items-center mb-2">
                         <Globe size={18} className="text-[#009C9F] mr-2" />
@@ -174,7 +174,7 @@ const About = () => {
                   </div>
                   
                   {/* Q2-2026 - Below road */}
-                  <div className="absolute" style={{ left: '860px', top: '430px' }}>
+                  <div className="absolute" style={{ left: '725px', top: '420px' }}>
                     <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                       <div className="flex items-center mb-2">
                         <Users size={18} className="text-[#009C9F] mr-2" />
