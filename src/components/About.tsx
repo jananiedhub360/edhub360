@@ -294,7 +294,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> {/* closes max-w-7xl */}
     </section>
   );
 };
