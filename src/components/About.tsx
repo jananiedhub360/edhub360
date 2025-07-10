@@ -126,18 +126,18 @@ const About = () => {
                 />
                 
                 {/* Milestone Dots at Exact Curve Points */}
-                <circle cx="175" cy="245" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
+                <circle cx="175" cy="250" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
                 <circle cx="425" cy="400" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
-                <circle cx="675" cy="245" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
+                <circle cx="675" cy="250" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
                 <circle cx="925" cy="400" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
-                <circle cx="1175" cy="245" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
+                <circle cx="1175" cy="250" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
                 <circle cx="1400" cy="400" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
               </svg>
 
               {/* Milestones */}
               <div className="absolute inset-0">
                 {/* Q3-2025 - Above road */}
-                <div className="absolute" style={{ left: '115px', top: '120px' }}>
+                <div className="absolute" style={{ left: '115px', top: '150px' }}>
                   <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                     <div className="flex items-center mb-2">
                       <GraduationCap size={18} className="text-[#009C9F] mr-2" />
@@ -148,7 +148,7 @@ const About = () => {
                 </div>
 
                 {/* Q4-2025 - Below road */}
-                  <div className="absolute" style={{ left: '155px', top: '420px' }}>
+                  <div className="absolute" style={{ left: '155px', top: '450px' }}>
                     <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                       <div className="flex items-center mb-2">
                         <Globe size={18} className="text-[#009C9F] mr-2" />
@@ -161,7 +161,7 @@ const About = () => {
                   </div>
   
                 {/* Q1-2026 - Above road */}
-                  <div className="absolute" style={{ left: '525px', top: '120px' }}>
+                  <div className="absolute" style={{ left: '525px', top: '150px' }}>
                     <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                       <div className="flex items-center mb-2">
                         <TrendingUp size={18} className="text-[#009C9F] mr-2" />
@@ -174,7 +174,7 @@ const About = () => {
                   </div>
                   
                   {/* Q2-2026 - Below road */}
-                  <div className="absolute" style={{ left: '565px', top: '420px' }}>
+                  <div className="absolute" style={{ left: '565px', top: '460px' }}>
                     <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                       <div className="flex items-center mb-2">
                         <Users size={18} className="text-[#009C9F] mr-2" />
@@ -187,7 +187,7 @@ const About = () => {
                   </div>
                   
                   {/* Q3-2026 - Above road */}
-                  <div className="absolute" style={{ left: '915px', top: '130px' }}>
+                  <div className="absolute" style={{ left: '915px', top: '160px' }}>
                     <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                       <div className="flex items-center mb-2">
                         <Award size={18} className="text-[#009C9F] mr-2" />
@@ -200,7 +200,7 @@ const About = () => {
                   </div>
                   
                   {/* Q4-2026 - Below road */}
-                  <div className="absolute" style={{ left: '935px', top: '420px' }}>
+                  <div className="absolute" style={{ left: '935px', top: '450px' }}>
                     <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                       <div className="flex items-center mb-2">
                         <Brain size={18} className="text-[#009C9F] mr-2" />
