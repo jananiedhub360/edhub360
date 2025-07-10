@@ -126,12 +126,12 @@ const About = () => {
                 />
                 
                 {/* Milestone Dots at Exact Curve Points */}
-                <circle cx="175" cy="225" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
-                <circle cx="425" cy="425" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
-                <circle cx="675" cy="225" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
-                <circle cx="925" cy="425" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
-                <circle cx="1175" cy="225" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
-                <circle cx="1400" cy="425" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
+                <circle cx="175" cy="205" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
+                <circle cx="425" cy="405" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
+                <circle cx="675" cy="205" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
+                <circle cx="925" cy="405" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
+                <circle cx="1175" cy="205" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
+                <circle cx="1400" cy="405" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
               </svg>
 
               {/* Milestones */}
@@ -143,12 +143,12 @@ const About = () => {
                       <GraduationCap size={18} className="text-[#009C9F] mr-2" />
                       <h4 className="text-sm font-bold text-[#00446E]">Q3-2025</h4>
                     </div>
-                    <p className="text-gray-700 text-sm leading-tight">Courses in Technology, Finance, and Legal</p>
+                    <p className="text-gray-700 text-sm leading-tight">Specilized Courses in Technology, Finance & Legal</p>
                   </div>
                 </div>
 
                 {/* Q4-2025 - Below road */}
-                  <div className="absolute" style={{ left: '175px', top: '420px' }}>
+                  <div className="absolute" style={{ left: '155px', top: '420px' }}>
                     <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                       <div className="flex items-center mb-2">
                         <Globe size={18} className="text-[#009C9F] mr-2" />
@@ -174,7 +174,7 @@ const About = () => {
                   </div>
                   
                   {/* Q2-2026 - Below road */}
-                  <div className="absolute" style={{ left: '595px', top: '420px' }}>
+                  <div className="absolute" style={{ left: '565px', top: '420px' }}>
                     <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                       <div className="flex items-center mb-2">
                         <Users size={18} className="text-[#009C9F] mr-2" />
