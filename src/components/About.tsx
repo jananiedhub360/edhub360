@@ -148,7 +148,7 @@ const About = () => {
                 </div>
 
                 {/* Q4-2025 - Below road */}
-                  <div className="absolute" style={{ left: '145px', top: '385px' }}>
+                  <div className="absolute" style={{ left: '145px', top: '395px' }}>
                     <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                       <div className="flex items-center mb-2">
                         <Globe size={18} className="text-[#009C9F] mr-2" />
@@ -174,7 +174,7 @@ const About = () => {
                   </div>
                   
                   {/* Q2-2026 - Below road */}
-                  <div className="absolute" style={{ left: '565px', top: '385px' }}>
+                  <div className="absolute" style={{ left: '565px', top: '395px' }}>
                     <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                       <div className="flex items-center mb-2">
                         <Users size={18} className="text-[#009C9F] mr-2" />
@@ -200,7 +200,7 @@ const About = () => {
                   </div>
                   
                   {/* Q4-2026 - Below road */}
-                  <div className="absolute" style={{ left: '935px', top: '385px' }}>
+                  <div className="absolute" style={{ left: '935px', top: '395px' }}>
                     <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 w-60 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                       <div className="flex items-center mb-2">
                         <Brain size={18} className="text-[#009C9F] mr-2" />
