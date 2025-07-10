@@ -94,7 +94,7 @@ const About = () => {
         </div>
 
         {/* Roadmap */}
-        <section>
+        <div>
           <h3 className="text-3xl font-bold text-[#00446E] mb-12 text-center">Our Strategic Direction</h3>
           
           {/* Curved Road Roadmap */}
