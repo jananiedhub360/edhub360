@@ -98,18 +98,18 @@ const About = () => {
           <h3 className="text-3xl font-bold text-[#00446E] mb-12 text-center">Our Strategic Direction</h3>
           
           {/* Curved Road Roadmap */}
-          <div className="relative max-w-6xl mx-auto overflow-x-auto">
+          <div className="relative max-w-7xl mx-auto overflow-x-auto">
             {/* Desktop Roadmap */}
-            <div className="hidden lg:block relative min-h-[600px] py-8">
+            <div className="hidden lg:block relative min-h-[650px] py-8">
               {/* Curved Road Path */}
               <svg 
                 className="absolute inset-0 w-full h-full" 
-                viewBox="0 0 1200 600" 
+                viewBox="0 0 1400 650" 
                 preserveAspectRatio="xMidYMid meet"
               >
                 {/* Main Road Path */}
                 <path
-                  d="M 50 300 Q 150 200 250 300 Q 350 400 450 300 Q 550 200 650 300 Q 750 400 850 300 Q 950 200 1050 300 Q 1100 350 1150 300"
+                  d="M 100 325 Q 200 225 300 325 Q 400 425 500 325 Q 600 225 700 325 Q 800 425 900 325 Q 1000 225 1100 325 Q 1200 375 1300 325"
                   stroke="#374151"
                   strokeWidth="24"
                   fill="none"
@@ -117,7 +117,7 @@ const About = () => {
                 />
                 {/* Dashed Center Line */}
                 <path
-                  d="M 50 300 Q 150 200 250 300 Q 350 400 450 300 Q 550 200 650 300 Q 750 400 850 300 Q 950 200 1050 300 Q 1100 350 1150 300"
+                  d="M 100 325 Q 200 225 300 325 Q 400 425 500 325 Q 600 225 700 325 Q 800 425 900 325 Q 1000 225 1100 325 Q 1200 375 1300 325"
                   stroke="#BEA260"
                   strokeWidth="3"
                   fill="none"
@@ -129,7 +129,7 @@ const About = () => {
               {/* Milestones */}
               <div className="absolute inset-0">
                 {/* Q3-2025 - Above road */}
-                <div className="absolute" style={{ left: '150px', top: '80px' }}>
+                <div className="absolute" style={{ left: '150px', top: '100px' }}>
                   <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 max-w-xs">
                     <div className="flex items-center mb-2">
                       <GraduationCap size={20} className="text-[#009C9F] mr-2" />
@@ -138,11 +138,11 @@ const About = () => {
                     <p className="text-gray-700 text-sm leading-relaxed">Specialized Courses in Technology, Finance, and Legal</p>
                   </div>
                   {/* Connection dot */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-4 w-4 h-4 bg-[#BEA260] rounded-full border-2 border-white shadow-lg"></div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-2 w-4 h-4 bg-[#BEA260] rounded-full border-2 border-white shadow-lg"></div>
                 </div>
 
                 {/* Q4-2025 - Below road */}
-                <div className="absolute" style={{ left: '350px', top: '440px' }}>
+                <div className="absolute" style={{ left: '350px', top: '450px' }}>
                   <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 max-w-xs">
                     <div className="flex items-center mb-2">
                       <Globe size={20} className="text-[#009C9F] mr-2" />
@@ -151,11 +151,11 @@ const About = () => {
                     <p className="text-gray-700 text-sm leading-relaxed">Global Reach Across Diverse Geographies</p>
                   </div>
                   {/* Connection dot */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 -top-6 w-4 h-4 bg-[#BEA260] rounded-full border-2 border-white shadow-lg"></div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 -top-4 w-4 h-4 bg-[#BEA260] rounded-full border-2 border-white shadow-lg"></div>
                 </div>
 
                 {/* Q1-2026 - Above road */}
-                <div className="absolute" style={{ left: '550px', top: '80px' }}>
+                <div className="absolute" style={{ left: '550px', top: '100px' }}>
                   <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 max-w-xs">
                     <div className="flex items-center mb-2">
                       <TrendingUp size={20} className="text-[#009C9F] mr-2" />
@@ -164,11 +164,11 @@ const About = () => {
                     <p className="text-gray-700 text-sm leading-relaxed">Professional Development and Upskilling</p>
                   </div>
                   {/* Connection dot */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-4 w-4 h-4 bg-[#BEA260] rounded-full border-2 border-white shadow-lg"></div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-2 w-4 h-4 bg-[#BEA260] rounded-full border-2 border-white shadow-lg"></div>
                 </div>
 
                 {/* Q2-2026 - Below road */}
-                <div className="absolute" style={{ left: '750px', top: '440px' }}>
+                <div className="absolute" style={{ left: '750px', top: '450px' }}>
                   <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 max-w-xs">
                     <div className="flex items-center mb-2">
                       <Users size={20} className="text-[#009C9F] mr-2" />
@@ -177,11 +177,11 @@ const About = () => {
                     <p className="text-gray-700 text-sm leading-relaxed">EdHub Community</p>
                   </div>
                   {/* Connection dot */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 -top-6 w-4 h-4 bg-[#BEA260] rounded-full border-2 border-white shadow-lg"></div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 -top-4 w-4 h-4 bg-[#BEA260] rounded-full border-2 border-white shadow-lg"></div>
                 </div>
 
                 {/* Q3-2026 - Above road */}
-                <div className="absolute" style={{ left: '950px', top: '80px' }}>
+                <div className="absolute" style={{ left: '950px', top: '100px' }}>
                   <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 max-w-xs">
                     <div className="flex items-center mb-2">
                       <Award size={20} className="text-[#009C9F] mr-2" />
@@ -190,11 +190,11 @@ const About = () => {
                     <p className="text-gray-700 text-sm leading-relaxed">Engage with Industry Experts</p>
                   </div>
                   {/* Connection dot */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-4 w-4 h-4 bg-[#BEA260] rounded-full border-2 border-white shadow-lg"></div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-2 w-4 h-4 bg-[#BEA260] rounded-full border-2 border-white shadow-lg"></div>
                 </div>
 
                 {/* Q4-2026 - Below road */}
-                <div className="absolute" style={{ left: '1050px', top: '340px' }}>
+                <div className="absolute" style={{ left: '1150px', top: '450px' }}>
                   <div className="bg-white border-2 border-[#009C9F] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 max-w-xs">
                     <div className="flex items-center mb-2">
                       <Brain size={20} className="text-[#009C9F] mr-2" />
@@ -203,7 +203,7 @@ const About = () => {
                     <p className="text-gray-700 text-sm leading-relaxed">Future Vision: AI-Powered Interactive Learning Bots</p>
                   </div>
                   {/* Connection dot */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 -top-6 w-4 h-4 bg-[#BEA260] rounded-full border-2 border-white shadow-lg"></div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 -top-4 w-4 h-4 bg-[#BEA260] rounded-full border-2 border-white shadow-lg"></div>
                 </div>
               </div>
             </div>
