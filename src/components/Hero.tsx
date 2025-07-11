@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Play, ChevronLeft, ChevronRight, DollarSign, Rocket, Users, Brain } from 'lucide-react';
+import { ArrowRight, Play, Infinity } from 'lucide-react';
 
 interface HeroProps {
   onGetInTouch: () => void;
@@ -7,52 +7,6 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ onGetInTouch, onExploreSolutions }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const benefits = [
-    {
-      icon: DollarSign,
-      headline: "90% Cost Reduction",
-      subtext: "Maximize ROI with minimal spend"
-    },
-    {
-      icon: Rocket,
-      headline: "Faster Learning with Relevant Content",
-      subtext: "Learn more in less time"
-    },
-    {
-      icon: Users,
-      headline: "Human + AI Collaboration",
-      subtext: "The best of both worlds"
-    },
-    {
-      icon: Brain,
-      headline: "Smart Personalization",
-      subtext: "Tailored paths for every learner"
-    }
-  ];
-
-  // Auto-rotation every 4.5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % benefits.length);
-    }, 4500);
-
-    return () => clearInterval(interval);
-  }, [benefits.length]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % benefits.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + benefits.length) % benefits.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
   return (
     <section id="home" className="relative bg-gradient-to-br from-[#009C9F] via-[#00446E] to-[#003355] text-white overflow-hidden">
       {/* Background Pattern */}
@@ -96,64 +50,34 @@ const Hero: React.FC<HeroProps> = ({ onGetInTouch, onExploreSolutions }) => {
             </div>
           </div>
 
-          {/* Animated Carousel */}
+          {/* 4-Block Benefits Grid */}
           <div className="relative">
             <div className="relative z-10 bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              {/* Carousel Container */}
-              <div className="relative h-48 mb-6 overflow-hidden rounded-xl">
-                <div 
-                  className="flex transition-transform duration-500 ease-in-out h-full"
-                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-                >
-                  {benefits.map((benefit, index) => {
-                    const IconComponent = benefit.icon;
-                    return (
-                      <div 
-                        key={index}
-                        className="w-full flex-shrink-0 bg-[#BEA260]/20 rounded-lg p-6 flex flex-col items-center justify-center text-center"
-                      >
-                        <div className="bg-[#BEA260] text-[#00446E] p-4 rounded-full mb-4">
-                          <IconComponent size={32} />
-                        </div>
-                        <h3 className="text-xl font-bold mb-2">{benefit.headline}</h3>
-                        <p className="text-sm text-gray-300">{benefit.subtext}</p>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {/* Navigation Controls */}
-              <div className="flex items-center justify-between mb-4">
-                <button 
-                  onClick={prevSlide}
-                  className="bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors"
-                  aria-label="Previous benefit"
-                >
-                  <ChevronLeft size={20} />
-                </button>
-
-                {/* Dots Indicator */}
-                <div className="flex space-x-2">
-                  {benefits.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => goToSlide(index)}
-                      className={`w-3 h-3 rounded-full transition-colors ${
-                        index === currentSlide ? 'bg-[#BEA260]' : 'bg-white/30'
-                      }`}
-                      aria-label={`Go to slide ${index + 1}`}
-                    />
-                  ))}
+              {/* 2x2 Benefits Grid */}
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                {/* 1/10th Cost */}
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/15 transition-colors">
+                  <div className="text-3xl font-bold text-[#BEA260] mb-2">1/10th</div>
+                  <div className="text-sm text-gray-300">Cost</div>
                 </div>
 
-                <button 
-                  onClick={nextSlide}
-                  className="bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors"
-                  aria-label="Next benefit"
-                >
-                  <ChevronRight size={20} />
-                </button>
+                {/* 5× Faster Learning */}
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/15 transition-colors">
+                  <div className="text-3xl font-bold text-[#BEA260] mb-2">5×</div>
+                  <div className="text-sm text-gray-300 leading-tight">Faster Learning with Streamlined Content</div>
+                </div>
+
+                {/* ∞ Smarter Learning */}
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/15 transition-colors">
+                  <div className="text-3xl font-bold text-[#BEA260] mb-2">∞</div>
+                  <div className="text-sm text-gray-300 leading-tight">Smarter Learning Powered by Humans + AI</div>
+                </div>
+
+                {/* 100% Personalized */}
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/15 transition-colors">
+                  <div className="text-3xl font-bold text-[#BEA260] mb-2">100%</div>
+                  <div className="text-sm text-gray-300">Personalized</div>
+                </div>
               </div>
 
               {/* Watch Demo Button */}
