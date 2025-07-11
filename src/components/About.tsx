@@ -111,7 +111,7 @@ const About = () => {
                   <path
                     d="M 50 325 Q 175 225 300 325 Q 425 425 550 325 Q 675 225 800 325 Q 925 425 1050 325 Q 1175 225 1300 325 Q 1400 375 1450 325"
                     stroke="#374151"
-                    strokeWidth="40"
+                    strokeWidth="45"
                     fill="none"
                     className="drop-shadow-sm"
                   />
@@ -131,7 +131,7 @@ const About = () => {
                   <circle cx="675" cy="250" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
                   <circle cx="925" cy="400" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
                   <circle cx="1175" cy="250" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
-                  <circle cx="1400" cy="400" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
+                  <circle cx="1400" cy="370" r="8" fill="#BEA260" stroke="white" strokeWidth="3" className="drop-shadow-sm" />
                 </svg>
   
                 {/* Milestones */}
@@ -143,7 +143,7 @@ const About = () => {
                         <GraduationCap size={18} className="text-[#009C9F] mr-2" />
                         <h4 className="text-sm font-bold text-[#00446E]">Q3-2025</h4>
                       </div>
-                      <p className="text-gray-700 text-sm leading-tight">Specilized Courses in Technology, Finance & Legal</p>
+                      <p className="text-gray-700 text-sm leading-tight">Specialized Courses in Technology, Finance & Legal</p>
                     </div>
                   </div>
   
