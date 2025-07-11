@@ -111,7 +111,7 @@ const About = () => {
                   <path
                     d="M 50 325 Q 175 225 300 325 Q 425 425 550 325 Q 675 225 800 325 Q 925 425 1050 325 Q 1175 225 1300 325 Q 1400 375 1450 325"
                     stroke="#374151"
-                    strokeWidth="24"
+                    strokeWidth="40"
                     fill="none"
                     className="drop-shadow-sm"
                   />
@@ -119,7 +119,7 @@ const About = () => {
                   <path
                     d="M 50 325 Q 175 225 300 325 Q 425 425 550 325 Q 675 225 800 325 Q 925 425 1050 325 Q 1175 225 1300 325 Q 1400 375 1450 325"
                     stroke="#BEA260"
-                    strokeWidth="3"
+                    strokeWidth="6"
                     fill="none"
                     strokeDasharray="15,10"
                     className="opacity-80"
