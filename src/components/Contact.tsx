@@ -11,16 +11,107 @@ const Contact = () => {
     gdprConsent: false
   });
 
+  const [errors, setErrors] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+    gdprConsent: ''
+  });
+
+  const [generalError, setGeneralError] = useState('');
   const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
 
+  const validateForm = () => {
+    const newErrors = {
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+      gdprConsent: ''
+    };
+    let isValid = true;
+
+    // Validate required fields
+    if (!formData.name.trim()) {
+      newErrors.name = 'Full name is required';
+      isValid = false;
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email address is required';
+      isValid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+      isValid = false;
+    }
+
+    if (!formData.subject.trim()) {
+      newErrors.subject = 'Subject is required';
+      isValid = false;
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+      isValid = false;
+    }
+
+    if (!formData.gdprConsent) {
+      newErrors.gdprConsent = 'You must agree to the privacy policy';
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    
+    if (!isValid) {
+      setGeneralError('Please fill all the required fields.');
+    } else {
+      setGeneralError('');
+    }
+
+    return isValid;
+  };
+
+  const generateMailtoLink = () => {
+    const emailBody = `Hello EDHUB360 Team,
+
+Name: ${formData.name}
+Email: ${formData.email}
+
+Message:
+${formData.message}
+
+Best regards,
+${formData.name}`;
+
+    const mailtoLink = `mailto:contact@edhub360.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`;
+    return mailtoLink;
+  };
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    
+    if (validateForm()) {
+      // Generate and open mailto link
+      const mailtoLink = generateMailtoLink();
+      window.location.href = mailtoLink;
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
+    
+    // Clear errors when user starts typing
+    if (errors[name as keyof typeof errors]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
+    
+    if (generalError) {
+      setGeneralError('');
+    }
+    
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
@@ -128,9 +219,14 @@ const Contact = () => {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#009C9F] focus:border-transparent transition-colors"
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#009C9F] focus:border-transparent transition-colors ${
+                    errors.name ? 'border-red-500' : 'border-gray-300'
+                  }`}
                   placeholder="Your full name"
                 />
+                {errors.name && (
+                  <p className="mt-1 text-sm text-red-600">{errors.name}</p>
+                )}
               </div>
 
               <div>
@@ -144,9 +240,14 @@ const Contact = () => {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#009C9F] focus:border-transparent transition-colors"
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#009C9F] focus:border-transparent transition-colors ${
+                    errors.email ? 'border-red-500' : 'border-gray-300'
+                  }`}
                   placeholder="your.email@example.com"
                 />
+                {errors.email && (
+                  <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+                )}
               </div>
 
               <div>
@@ -160,9 +261,14 @@ const Contact = () => {
                   required
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#009C9F] focus:border-transparent transition-colors"
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#009C9F] focus:border-transparent transition-colors ${
+                    errors.subject ? 'border-red-500' : 'border-gray-300'
+                  }`}
                   placeholder="What can we help you with?"
                 />
+                {errors.subject && (
+                  <p className="mt-1 text-sm text-red-600">{errors.subject}</p>
+                )}
               </div>
 
               <div>
@@ -176,9 +282,14 @@ const Contact = () => {
                   rows={5}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#009C9F] focus:border-transparent transition-colors resize-vertical"
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#009C9F] focus:border-transparent transition-colors resize-vertical ${
+                    errors.message ? 'border-red-500' : 'border-gray-300'
+                  }`}
                   placeholder="Tell us more about your needs..."
                 />
+                {errors.message && (
+                  <p className="mt-1 text-sm text-red-600">{errors.message}</p>
+                )}
               </div>
 
               <div className="flex items-start space-x-3">
@@ -189,7 +300,9 @@ const Contact = () => {
                   required
                   checked={formData.gdprConsent}
                   onChange={handleChange}
-                  className="mt-1 h-4 w-4 text-[#009C9F] focus:ring-[#009C9F] border-gray-300 rounded"
+                  className={`mt-1 h-4 w-4 text-[#009C9F] focus:ring-[#009C9F] border-gray-300 rounded ${
+                    errors.gdprConsent ? 'border-red-500' : ''
+                  }`}
                 />
                 <label htmlFor="gdprConsent" className="text-sm text-gray-700">
                   I agree to the processing of my personal data in accordance with the{' '}
@@ -202,13 +315,17 @@ const Contact = () => {
                   </button> and consent to being contacted regarding my inquiry. *
                 </label>
               </div>
+              {errors.gdprConsent && (
+                <p className="text-sm text-red-600 -mt-2">{errors.gdprConsent}</p>
+              )}
 
+              {generalError && (
+                <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+                  <p className="text-sm text-red-600 font-medium">{generalError}</p>
+                </div>
+              )}
               <button
                 type="submit"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.location.href = 'mailto:contact@edhub360.com';
-                }}
                 className="w-full bg-gradient-to-r from-[#009C9F] to-[#00446E] text-white py-4 px-6 rounded-lg font-semibold hover:from-[#00446E] hover:to-[#009C9F] transition-all duration-300 flex items-center justify-center group"
               >
                 <Send size={20} className="mr-2 group-hover:translate-x-1 transition-transform" />
