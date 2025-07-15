@@ -57,26 +57,26 @@ const Hero: React.FC<HeroProps> = ({ onGetInTouch, onExploreSolutions }) => {
               <div className="grid grid-cols-2 gap-4 mb-6">
                 {/* 1/10th Cost */}
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/15 transition-colors">
-                  <div className="text-3xl font-bold text-[#BEA260] mb-2">1/10th</div>
+                  <div className="text-3xl font-bold text-white mb-2">1/10th</div>
                   <div className="text-sm text-gray-300">Cost</div>
                 </div>
 
                 {/* 5× Faster Learning */}
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/15 transition-colors">
-                  <div className="text-3xl font-bold text-[#BEA260] mb-2">5×</div>
-                  <div className="text-sm text-gray-300 leading-tight">Faster Learning with Streamlined Content</div>
+                  <div className="text-3xl font-bold text-white mb-2">40%</div>
+                  <div className="text-sm text-gray-300 leading-tight">Time Saved with Personalised Courses</div>
                 </div>
 
                 {/* ∞ Smarter Learning */}
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/15 transition-colors">
-                  <div className="text-3xl font-bold text-[#BEA260] mb-2">∞</div>
-                  <div className="text-sm text-gray-300 leading-tight">Smarter Learning Powered by Humans + AI</div>
+                  <div className="text-3xl font-bold text-white mb-2"></div>
+                  <div className="text-md text-white-300 leading-tight">Smarter Learning with an AI-Powered Mentor</div>
                 </div>
 
                 {/* 100% Personalized */}
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/15 transition-colors">
-                  <div className="text-3xl font-bold text-[#BEA260] mb-2">100%</div>
-                  <div className="text-sm text-gray-300">Personalized</div>
+                  <div className="text-3xl font-bold text-white mb-2"></div>
+                  <div className="text-md text-white-300">Your Speed Lane to Lifelong Skills.</div>
                 </div>
               </div>
 
