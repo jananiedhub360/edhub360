@@ -58,13 +58,13 @@ const Hero: React.FC<HeroProps> = ({ onGetInTouch, onExploreSolutions }) => {
                 {/* 1/10th Cost */}
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/15 transition-colors">
                   <div className="text-3xl font-bold text-white mb-2">1/10th</div>
-                  <div className="text-sm text-gray-300">Cost</div>
+                  <div className="text-md text-gray-300">Cost</div>
                 </div>
 
                 {/* 5× Faster Learning */}
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/15 transition-colors">
                   <div className="text-3xl font-bold text-white mb-2">40%</div>
-                  <div className="text-sm text-gray-300 leading-tight">Time Saved with Personalised Courses</div>
+                  <div className="text-md text-gray-300 leading-tight">Time Saved with Personalised Courses</div>
                 </div>
 
                 {/* ∞ Smarter Learning */}
