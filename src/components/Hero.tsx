@@ -76,7 +76,7 @@ const Hero: React.FC<HeroProps> = ({ onGetInTouch, onExploreSolutions }) => {
                 {/* 100% Personalized */}
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/15 transition-colors">
                   <div className="text-3xl font-bold text-white mb-2"></div>
-                  <div className="text-md text-white-300">Lifelong Upskilling.</div>
+                  <div className="text-md text-white-300">Lifelong Upskilling</div>
                 </div>
               </div>
 
