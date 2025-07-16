@@ -26,7 +26,7 @@ ${currentFormData.name}`;
 
     const encodedSubject = encodeURIComponent(currentFormData.subject);
     const encodedBody = encodeURIComponent(emailBody);
-    const mailtoLink = `mailto:contact@edhub360.com?subject=${encodedSubject}&body=${encodedBody}`;
+    const mailtoLink = `mailto:jananiparameswaranp@gmail.com?subject=${encodedSubject}&body=${encodedBody}`;
     return mailtoLink;
   };
 
