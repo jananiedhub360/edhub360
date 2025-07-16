@@ -7,111 +7,51 @@ const Contact = () => {
     name: '',
     email: '',
     subject: '',
-    message: '',
-    gdprConsent: false
+    message: ''
   });
 
-  const [errors, setErrors] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-    gdprConsent: ''
-  });
-
-  const [generalError, setGeneralError] = useState('');
   const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
 
-  const validateForm = () => {
-    const newErrors = {
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-      gdprConsent: ''
-    };
-    let isValid = true;
-
-    // Validate required fields
-    if (!formData.name.trim()) {
-      newErrors.name = 'Full name is required';
-      isValid = false;
-    }
-
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email address is required';
-      isValid = false;
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
-      isValid = false;
-    }
-
-    if (!formData.subject.trim()) {
-      newErrors.subject = 'Subject is required';
-      isValid = false;
-    }
-
-    if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
-      isValid = false;
-    }
-
-    if (!formData.gdprConsent) {
-      newErrors.gdprConsent = 'You must agree to the privacy policy';
-      isValid = false;
-    }
-
-    setErrors(newErrors);
-    
-    if (!isValid) {
-      setGeneralError('Please fill all the required fields.');
-    } else {
-      setGeneralError('');
-    }
-
-    return isValid;
-  };
-
-  const generateMailtoLink = () => {
+  const generateMailtoLink = (currentFormData: typeof formData) => {
     const emailBody = `Hello EDHUB360 Team,
 
-Name: ${formData.name}
-Email: ${formData.email}
+Name: ${currentFormData.name}
+Email: ${currentFormData.email}
 
 Message:
-${formData.message}
+${currentFormData.message}
 
 Best regards,
-${formData.name}`;
+${currentFormData.name}`;
 
-    const mailtoLink = `mailto:contact@edhub360.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`;
+    const encodedSubject = encodeURIComponent(currentFormData.subject);
+    const encodedBody = encodeURIComponent(emailBody);
+    const mailtoLink = `mailto:contact@edhub360.com?subject=${encodedSubject}&body=${encodedBody}`;
     return mailtoLink;
   };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (validateForm()) {
-      // Generate and open mailto link
-      const mailtoLink = generateMailtoLink();
-      window.location.href = mailtoLink;
-    }
+    // Get fresh form data from the form elements
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    
+    const currentFormData = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      subject: formData.get('subject') as string,
+      message: formData.get('message') as string
+    };
+    
+    // Generate and open mailto link with fresh values
+    const mailtoLink = generateMailtoLink(currentFormData);
+    window.location.href = mailtoLink;
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
-    
-    // Clear errors when user starts typing
-    if (errors[name as keyof typeof errors]) {
-      setErrors(prev => ({
-        ...prev,
-        [name]: ''
-      }));
-    }
-    
-    if (generalError) {
-      setGeneralError('');
-    }
-    
+
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
@@ -219,14 +159,9 @@ ${formData.name}`;
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#009C9F] focus:border-transparent transition-colors ${
-                    errors.name ? 'border-red-500' : 'border-gray-300'
-                  }`}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#009C9F] focus:border-transparent transition-colors"
                   placeholder="Your full name"
                 />
-                {errors.name && (
-                  <p className="mt-1 text-sm text-red-600">{errors.name}</p>
-                )}
               </div>
 
               <div>
@@ -240,14 +175,9 @@ ${formData.name}`;
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#009C9F] focus:border-transparent transition-colors ${
-                    errors.email ? 'border-red-500' : 'border-gray-300'
-                  }`}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#009C9F] focus:border-transparent transition-colors"
                   placeholder="your.email@example.com"
                 />
-                {errors.email && (
-                  <p className="mt-1 text-sm text-red-600">{errors.email}</p>
-                )}
               </div>
 
               <div>
@@ -261,14 +191,9 @@ ${formData.name}`;
                   required
                   value={formData.subject}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#009C9F] focus:border-transparent transition-colors ${
-                    errors.subject ? 'border-red-500' : 'border-gray-300'
-                  }`}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#009C9F] focus:border-transparent transition-colors"
                   placeholder="What can we help you with?"
                 />
-                {errors.subject && (
-                  <p className="mt-1 text-sm text-red-600">{errors.subject}</p>
-                )}
               </div>
 
               <div>
@@ -282,29 +207,20 @@ ${formData.name}`;
                   rows={5}
                   value={formData.message}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#009C9F] focus:border-transparent transition-colors resize-vertical ${
-                    errors.message ? 'border-red-500' : 'border-gray-300'
-                  }`}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#009C9F] focus:border-transparent transition-colors resize-vertical"
                   placeholder="Tell us more about your needs..."
                 />
-                {errors.message && (
-                  <p className="mt-1 text-sm text-red-600">{errors.message}</p>
-                )}
               </div>
 
               <div className="flex items-start space-x-3">
                 <input
                   type="checkbox"
-                  id="gdprConsent"
-                  name="gdprConsent"
+                  id="privacy"
+                  name="privacy"
                   required
-                  checked={formData.gdprConsent}
-                  onChange={handleChange}
-                  className={`mt-1 h-4 w-4 text-[#009C9F] focus:ring-[#009C9F] border-gray-300 rounded ${
-                    errors.gdprConsent ? 'border-red-500' : ''
-                  }`}
+                  className="mt-1 h-4 w-4 text-[#009C9F] focus:ring-[#009C9F] border-gray-300 rounded"
                 />
-                <label htmlFor="gdprConsent" className="text-sm text-gray-700">
+                <label htmlFor="privacy" className="text-sm text-gray-700">
                   I agree to the processing of my personal data in accordance with the{' '}
                   <button 
                     type="button"
@@ -315,15 +231,7 @@ ${formData.name}`;
                   </button> and consent to being contacted regarding my inquiry. *
                 </label>
               </div>
-              {errors.gdprConsent && (
-                <p className="text-sm text-red-600 -mt-2">{errors.gdprConsent}</p>
-              )}
 
-              {generalError && (
-                <div className="bg-red-50 border border-red-200 rounded-lg p-3">
-                  <p className="text-sm text-red-600 font-medium">{generalError}</p>
-                </div>
-              )}
               <button
                 type="submit"
                 className="w-full bg-gradient-to-r from-[#009C9F] to-[#00446E] text-white py-4 px-6 rounded-lg font-semibold hover:from-[#00446E] hover:to-[#009C9F] transition-all duration-300 flex items-center justify-center group"
