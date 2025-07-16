@@ -57,8 +57,8 @@ const Hero: React.FC<HeroProps> = ({ onGetInTouch, onExploreSolutions }) => {
               <div className="grid grid-cols-2 gap-4 mb-6">
                 {/* 1/10th Cost */}
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/15 transition-colors">
-                  <div className="text-3xl font-bold text-white mb-2">1/10th</div>
-                  <div className="text-md text-gray-300">Cost</div>
+                  <div className="text-3xl font-bold text-white mb-2">1/10-th</div>
+                  <div className="text-md text-gray-300">College Cost</div>
                 </div>
 
                 {/* 5× Faster Learning */}
@@ -70,13 +70,13 @@ const Hero: React.FC<HeroProps> = ({ onGetInTouch, onExploreSolutions }) => {
                 {/* ∞ Smarter Learning */}
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/15 transition-colors">
                   <div className="text-3xl font-bold text-white mb-2"></div>
-                  <div className="text-md text-white-300 leading-tight">Smarter Learning with an AI-Powered Mentor</div>
+                  <div className="text-md text-white-300 leading-tight">Interactive Learning with an AI Bot</div>
                 </div>
 
                 {/* 100% Personalized */}
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/15 transition-colors">
                   <div className="text-3xl font-bold text-white mb-2"></div>
-                  <div className="text-md text-white-300">Your Speed Lane to Lifelong Skills.</div>
+                  <div className="text-md text-white-300">Lifelong Upskilling.</div>
                 </div>
               </div>
 
