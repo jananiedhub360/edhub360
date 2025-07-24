@@ -34,7 +34,7 @@ const Courses = () => {
       key={index} 
       className="bg-white rounded-2xl p-6 lg:p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group hover:border-[#009C9F] transform hover:-translate-y-2"
     >
-      {hasImage && course.image ? (
+      {course.image ? (
         <div className="mb-6">
           <img 
             src={course.image} 
