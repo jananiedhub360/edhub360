@@ -23,9 +23,9 @@ const Courses = () => {
   const legalCourses = [
     {
       title: "Legal Fundamentals for Business",
-      description: "Essential legal knowledge for entrepreneurs and business professionals",
-      icon: Scale,
-      url: "#"
+      description: "",
+      image: "/law_course_image.jpg",
+      url: "https://edhub360.trainercentralsite.com/course/bootcamp-for-practice"
     }
   ];
 
