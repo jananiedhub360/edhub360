@@ -7,16 +7,46 @@ const Contact = () => {
     name: '',
     email: '',
     subject: '',
-    message: '',
-    gdprConsent: false
+    message: ''
   });
 
   const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
 
+  const generateMailtoLink = (currentFormData: typeof formData) => {
+    const emailBody = `Hello EDHUB360 Team,
+
+Name: ${currentFormData.name}
+Email: ${currentFormData.email}
+
+Message:
+${currentFormData.message}
+
+Best regards,
+${currentFormData.name}`;
+
+    const encodedSubject = encodeURIComponent(currentFormData.subject);
+    const encodedBody = encodeURIComponent(emailBody);
+    const mailtoLink = `mailto:contact@edhub360.com?subject=${encodedSubject}&body=${encodedBody}`;
+    return mailtoLink;
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    
+    // Get fresh form data from the form elements
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    
+    const currentFormData = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      subject: formData.get('subject') as string,
+      message: formData.get('message') as string
+    };
+    
+    // Generate and open mailto link with fresh values
+    const mailtoLink = generateMailtoLink(currentFormData);
+    window.location.href = mailtoLink;
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -184,14 +214,12 @@ const Contact = () => {
               <div className="flex items-start space-x-3">
                 <input
                   type="checkbox"
-                  id="gdprConsent"
-                  name="gdprConsent"
+                  id="privacy"
+                  name="privacy"
                   required
-                  checked={formData.gdprConsent}
-                  onChange={handleChange}
                   className="mt-1 h-4 w-4 text-[#009C9F] focus:ring-[#009C9F] border-gray-300 rounded"
                 />
-                <label htmlFor="gdprConsent" className="text-sm text-gray-700">
+                <label htmlFor="privacy" className="text-sm text-gray-700">
                   I agree to the processing of my personal data in accordance with the{' '}
                   <button 
                     type="button"
@@ -205,10 +233,6 @@ const Contact = () => {
 
               <button
                 type="submit"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.location.href = 'mailto:contact@edhub360.com';
-                }}
                 className="w-full bg-gradient-to-r from-[#009C9F] to-[#00446E] text-white py-4 px-6 rounded-lg font-semibold hover:from-[#00446E] hover:to-[#009C9F] transition-all duration-300 flex items-center justify-center group"
               >
                 <Send size={20} className="mr-2 group-hover:translate-x-1 transition-transform" />

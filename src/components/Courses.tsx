@@ -22,10 +22,10 @@ const Courses = () => {
 
   const legalCourses = [
     {
-      title: "Legal Fundamentals for Business",
-      description: "Essential legal knowledge for entrepreneurs and business professionals",
-      icon: Scale,
-      url: "#"
+      title: "Bootcamp for Practice: Decoding Law",
+      description: "Turning Legal Theory into Real-World Expertise.",
+      image: "/law_course_image.jpg",
+      url: "https://edhub360.trainercentralsite.com/course/bootcamp-for-practice"
     }
   ];
 
@@ -34,7 +34,7 @@ const Courses = () => {
       key={index} 
       className="bg-white rounded-2xl p-6 lg:p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group hover:border-[#009C9F] transform hover:-translate-y-2"
     >
-      {hasImage && course.image ? (
+      {course.image ? (
         <div className="mb-6">
           <img 
             src={course.image} 
@@ -44,9 +44,10 @@ const Courses = () => {
         </div>
       ) : (
         <div className="bg-gradient-to-br from-[#009C9F] to-[#00446E] text-white p-4 rounded-xl w-fit mb-6 group-hover:scale-110 transition-transform duration-300">
-          <course.icon size={32} />
-        </div>
-      )}
+        {/* Optional: Fallback text or placeholder */}
+        <span className="text-lg font-bold">No Image</span>
+      </div>
+    )}
       
       <h3 className="text-lg lg:text-xl font-bold text-gray-900 mb-4 group-hover:text-[#009C9F] transition-colors line-clamp-2">
         {course.title}
