@@ -44,9 +44,10 @@ const Courses = () => {
         </div>
       ) : (
         <div className="bg-gradient-to-br from-[#009C9F] to-[#00446E] text-white p-4 rounded-xl w-fit mb-6 group-hover:scale-110 transition-transform duration-300">
-          <course.icon size={32} />
-        </div>
-      )}
+        {/* Optional: Fallback text or placeholder */}
+        <span className="text-lg font-bold">No Image</span>
+      </div>
+    )}
       
       <h3 className="text-lg lg:text-xl font-bold text-gray-900 mb-4 group-hover:text-[#009C9F] transition-colors line-clamp-2">
         {course.title}
