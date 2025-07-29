@@ -28,7 +28,7 @@ const ProblemSolution = () => {
             Why College Degrees Are Being Disrupted
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Traditional higher education faces unprecedented challenges that are reshaping the future of learning
+            Traditional higher education faces unprecedented challenges that are reshaping the future of learning. A recent report highlights how <a href="https://www.yahoo.com/news/gen-z-men-college-degrees-163007757.html" className="text-teal-600 underline hover:text-teal-800" target="_blank" rel="noopener noreferrer">Gen Z men are increasingly skipping college degrees</a>, underscoring the shifting perceptions and real value of traditional education. 
           </p>
         </div>
 
