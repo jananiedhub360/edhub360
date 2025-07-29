@@ -32,7 +32,7 @@ const Courses = () => {
   const CourseCard = ({ course, index, hasImage = false }: { course: any; index: number; hasImage?: boolean }) => (
     <div 
       key={index} 
-      className="bg-[#FAFAFA] rounded-2xl p-6 lg:p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group hover:border-[#009C9F] transform hover:-translate-y-2 max-w-md"
+      className="bg-gray-150 rounded-2xl p-6 lg:p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group hover:border-[#009C9F] transform hover:-translate-y-2 max-w-md"
     >
       {course.image ? (
         <div className="mb-6">
