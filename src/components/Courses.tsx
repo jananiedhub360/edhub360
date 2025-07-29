@@ -32,14 +32,14 @@ const Courses = () => {
   const CourseCard = ({ course, index, hasImage = false }: { course: any; index: number; hasImage?: boolean }) => (
     <div 
       key={index} 
-      className="bg-white rounded-2xl p-6 lg:p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group hover:border-[#009C9F] transform hover:-translate-y-2"
+      className="bg-white rounded-2xl p-6 lg:p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group hover:border-[#009C9F] transform hover:-translate-y-2 max-w-md"
     >
       {course.image ? (
         <div className="mb-6">
           <img 
             src={course.image} 
             alt={course.title}
-            className="w-full h-48 object-cover rounded-xl shadow-md group-hover:shadow-lg transition-shadow duration-300"
+            className="w-full h-56 object-cover rounded-xl shadow-md group-hover:shadow-lg transition-shadow duration-300"
           />
         </div>
       ) : (
@@ -49,7 +49,7 @@ const Courses = () => {
       </div>
     )}
       
-      <h3 className="text-lg lg:text-xl font-bold text-gray-900 mb-4 group-hover:text-[#009C9F] transition-colors line-clamp-2">
+      <h3 className="text-lg lg:text-xl font-bold text-gray-900 mb-4 group-hover:text-[#009C9F] transition-colors whitespace-normal break-words">
         {course.title}
       </h3>
       
