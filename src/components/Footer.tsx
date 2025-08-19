@@ -1,20 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Facebook, Linkedin, Instagram } from 'lucide-react';
 import PrivacyPolicyModal from './PrivacyPolicyModal';
 
-interface FooterProps {
-  onNavigate?: (view: 'home' | 'about' | 'contact' | 'courses') => void;
-}
-
-const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+const Footer: React.FC = () => {
   const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
-
-  const handleNavigation = (view: 'home' | 'about' | 'contact' | 'courses') => {
-    if (onNavigate) {
-      onNavigate(view);
-    }
-  };
 
   return (
     <>
@@ -23,7 +14,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-3 mb-4">
+            <Link to="/" className="flex items-center space-x-3 mb-4">
               <img 
                 src="/logo.png" 
                 alt="EDHUB360 Logo" 
@@ -32,7 +23,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <span className="text-2xl font-bold text-white font-heading">
                 EDHUB360
               </span>
-            </div>
+            </Link>
             <p className="text-gray-300 mb-4 max-w-md">
               Education without limits. We build intelligent, user-focused learning solutions that empower individuals, educators, and organizations to grow.
             </p>
@@ -59,36 +50,36 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <button 
-                  onClick={() => handleNavigation('home')}
-                  className="text-gray-300 hover:text-[#BEA260] transition-colors text-left"
+                <Link 
+                  to="/"
+                  className="text-gray-300 hover:text-[#BEA260] transition-colors"
                 >
                   Home
-                </button>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => handleNavigation('courses')}
-                  className="text-gray-300 hover:text-[#BEA260] transition-colors text-left"
+                <Link 
+                  to="/courses"
+                  className="text-gray-300 hover:text-[#BEA260] transition-colors"
                 >
                   Courses
-                </button>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => handleNavigation('about')}
-                  className="text-gray-300 hover:text-[#BEA260] transition-colors text-left"
+                <Link 
+                  to="/about"
+                  className="text-gray-300 hover:text-[#BEA260] transition-colors"
                 >
                   About Us
-                </button>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => handleNavigation('contact')}
-                  className="text-gray-300 hover:text-[#BEA260] transition-colors text-left"
+                <Link 
+                  to="/contact"
+                  className="text-gray-300 hover:text-[#BEA260] transition-colors"
                 >
                   Contact
-                </button>
+                </Link>
               </li>
               <li>
                 <button 

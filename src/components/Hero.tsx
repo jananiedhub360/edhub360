@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Play, Infinity } from 'lucide-react';
 
-interface HeroProps {
-  onGetInTouch: () => void;
-  onExploreSolutions: () => void;
-}
-
-const Hero: React.FC<HeroProps> = ({ onGetInTouch, onExploreSolutions }) => {
+const Hero: React.FC = () => {
   return (
     <section id="home" className="relative bg-gradient-to-br from-[#009C9F] via-[#00446E] to-[#003355] text-white overflow-hidden">
       {/* Background Pattern */}
@@ -34,19 +30,19 @@ const Hero: React.FC<HeroProps> = ({ onGetInTouch, onExploreSolutions }) => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button 
-                onClick={onExploreSolutions}
+              <Link 
+                to="/courses"
                 className="bg-[#BEA260] text-[#00446E] px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105 flex items-center justify-center group"
               >
                 Explore Solutions
                 <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button 
-                onClick={onGetInTouch}
+              </Link>
+              <Link 
+                to="/contact"
                 className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-[#00446E] transition-all duration-300 flex items-center justify-center"
               >
                 Get in Touch
-              </button>
+              </Link>
             </div>
           </div>
 

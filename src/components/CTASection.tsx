@@ -1,12 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Globe, Award, Users, Zap } from 'lucide-react';
 
-interface CTASectionProps {
-  onScheduleDemo: () => void;
-  onLearnMore: () => void;
-}
-
-const CTASection: React.FC<CTASectionProps> = ({ onScheduleDemo, onLearnMore }) => {
+const CTASection: React.FC = () => {
   const futureFeatures = [
     {
       icon: Globe,

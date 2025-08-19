@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ProblemSolution from './components/ProblemSolution';
@@ -9,41 +10,33 @@ import Contact from './components/Contact';
 import Courses from './components/Courses';
 import Footer from './components/Footer';
 
+// Home page component
+const HomePage = () => (
+  <>
+    <Hero />
+    <ProblemSolution />
+    <WhyEdHub />
+    <CTASection />
+  </>
+);
+
 function App() {
-  const [currentView, setCurrentView] = useState<'home' | 'about' | 'contact' | 'courses'>('home');
-
-  const renderCurrentView = () => {
-    switch (currentView) {
-      case 'about':
-        return <About />;
-      case 'contact':
-        return <Contact />;
-      case 'courses':
-        return <Courses />;
-      case 'home':
-      default:
-        return (
-          <>
-            <Hero 
-              onGetInTouch={() => setCurrentView('contact')} 
-              onExploreSolutions={() => setCurrentView('courses')} 
-            />
-            <ProblemSolution />
-            <WhyEdHub />
-            <CTASection onScheduleDemo={() => setCurrentView('contact')} onLearnMore={() => setCurrentView('about')} />
-          </>
-        );
-    }
-  };
-
   return (
-    <div className="min-h-screen">
-      <Header currentView={currentView} onNavigate={setCurrentView} />
-      <main>
-        {renderCurrentView()}
-      </main>
-      <Footer onNavigate={setCurrentView} />
-    </div>
+    <Router>
+      <div className="min-h-screen">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/home" element={<HomePage />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
