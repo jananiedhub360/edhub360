@@ -22,7 +22,7 @@ const HomePage = () => (
 
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <div className="min-h-screen">
         <Header />
         <main>
@@ -32,6 +32,8 @@ function App() {
             <Route path="/courses" element={<Courses />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
+            {/* Catch all route - redirect to home */}
+            <Route path="*" element={<HomePage />} />
           </Routes>
         </main>
         <Footer />
