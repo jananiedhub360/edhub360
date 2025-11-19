@@ -90,14 +90,13 @@ const NewsFeed: React.FC = () => {
   const [news, setNews] = useState<NewsItem[]>([]);
   const [filteredNews, setFilteredNews] = useState<NewsItem[]>([]);
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [visibleCount, setVisibleCount] = useState(3);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [lastUpdated, setLastUpdated] = useState<string>('');
   const [isPaused, setIsPaused] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
   
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
 
   // Google Sheets fetch function
   const fetchNews = async () => {
@@ -142,14 +141,13 @@ const NewsFeed: React.FC = () => {
       setFilteredNews(news.filter(item => item.category === selectedCategory));
     }
     setCurrentSlide(0);
-    setVisibleCount(3);
   }, [news, selectedCategory]);
 
-  // Auto-carousel
+  // Auto-carousel with smooth transitions
   useEffect(() => {
-    if (!isPaused && filteredNews.length > 0) {
+    if (!isPaused && filteredNews.length > 1) {
       intervalRef.current = setInterval(() => {
-        setCurrentSlide(prev => (prev + 1) % Math.ceil(filteredNews.slice(0, visibleCount).length));
+        handleNextSlide();
       }, 8000);
     }
 
@@ -158,15 +156,33 @@ const NewsFeed: React.FC = () => {
         clearInterval(intervalRef.current);
       }
     };
-  }, [filteredNews, visibleCount, isPaused]);
+  }, [filteredNews, isPaused]);
 
-  const handleLoadMore = () => {
-    setVisibleCount(prev => Math.min(prev + 3, filteredNews.length));
+  const handleNextSlide = () => {
+    if (filteredNews.length <= 1) return;
+    setIsTransitioning(true);
     setTimeout(() => {
-      if (containerRef.current) {
-        containerRef.current.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }
-    }, 100);
+      setCurrentSlide(prev => (prev + 1) % filteredNews.length);
+      setIsTransitioning(false);
+    }, 150);
+  };
+
+  const handlePrevSlide = () => {
+    if (filteredNews.length <= 1) return;
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentSlide(prev => prev === 0 ? filteredNews.length - 1 : prev - 1);
+      setIsTransitioning(false);
+    }, 150);
+  };
+
+  const handleDotClick = (index: number) => {
+    if (index === currentSlide || filteredNews.length <= 1) return;
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentSlide(index);
+      setIsTransitioning(false);
+    }, 150);
   };
 
   const formatDate = (dateString: string) => {
@@ -189,8 +205,7 @@ const NewsFeed: React.FC = () => {
     });
   };
 
-  const visibleNews = filteredNews.slice(0, visibleCount);
-  const hasMoreNews = visibleCount < filteredNews.length;
+  const currentNews = filteredNews[currentSlide];
 
   if (isLoading) {
     return (
@@ -206,7 +221,7 @@ const NewsFeed: React.FC = () => {
   }
 
   return (
-    <section className="py-20 bg-white" ref={containerRef}>
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-12">
@@ -246,114 +261,178 @@ const NewsFeed: React.FC = () => {
           ))}
         </div>
 
-        {/* News Cards */}
-        <div 
-          className="space-y-6 mb-8"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-        >
-          {visibleNews.map((item, index) => (
-            <article
-              key={item.id}
-              className={`rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 overflow-hidden border border-gray-100 ${
-                index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
-              }`}
-            >
-              <div className="flex flex-col lg:flex-row">
-                {/* Image Section */}
-                <div className="lg:w-1/3 relative">
-                  <img
-                    src={item.imageUrl}
-                    alt={item.title}
-                    className="w-full h-64 lg:h-full object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-[#009C9F] text-white px-3 py-1 rounded-full text-xs font-semibold">
-                      {item.category}
-                    </span>
-                  </div>
-                </div>
+        {/* Single News Card with Navigation */}
+        <div className="relative mb-12">
+          {/* Navigation Arrows */}
+          {filteredNews.length > 1 && (
+            <>
+              <button
+                onClick={handlePrevSlide}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-all duration-300 hover:scale-110 border border-gray-200"
+                aria-label="Previous news article"
+              >
+                <ChevronLeft size={24} className="text-[#009C9F]" />
+              </button>
+              
+              <button
+                onClick={handleNextSlide}
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-all duration-300 hover:scale-110 border border-gray-200"
+                aria-label="Next news article"
+              >
+                <ChevronRight size={24} className="text-[#009C9F]" />
+              </button>
+            </>
+          )}
 
-                {/* Content Section */}
-                <div className="lg:w-2/3 p-6 lg:p-8 flex flex-col justify-between">
-                  <div>
-                    <div className="flex items-center text-sm text-gray-500 mb-3">
-                      <Calendar size={14} className="mr-2" />
-                      <span>{formatDate(item.publishedDate)}</span>
-                      <span className="mx-2">•</span>
-                      <span className="font-medium">{item.source}</span>
+          {/* News Card */}
+          <div
+            className="transition-all duration-300 ease-in-out"
+            style={{
+              opacity: isTransitioning ? 0.7 : 1,
+              transform: isTransitioning ? 'translateY(10px)' : 'translateY(0)'
+            }}
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            {currentNews && (
+              <article className="rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden border border-gray-100 bg-white max-w-4xl mx-auto">
+                <div className="flex flex-col lg:flex-row">
+                  {/* Image Section */}
+                  <div className="lg:w-1/3 relative">
+                    <img
+                      src={currentNews.imageUrl}
+                      alt={currentNews.title}
+                      className="w-full h-64 lg:h-full object-cover"
+                      loading="lazy"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-[#009C9F] text-white px-3 py-1 rounded-full text-xs font-semibold">
+                        {currentNews.category}
+                      </span>
                     </div>
-                    
-                    <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4 hover:text-[#009C9F] transition-colors">
-                      {item.title}
-                    </h3>
-                    
-                    <p className="text-gray-600 leading-relaxed mb-6 line-clamp-3">
-                      {item.summary}
-                    </p>
                   </div>
 
-                  <div>
-                    <a
-                      href={item.articleUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center bg-gradient-to-r from-[#009C9F] to-[#00446E] text-white px-6 py-3 rounded-full font-semibold hover:from-[#00446E] hover:to-[#009C9F] transition-all duration-300 group"
-                    >
-                      Read Full Article
-                      <ExternalLink size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                    </a>
+                  {/* Content Section */}
+                  <div className="lg:w-2/3 p-6 lg:p-8 flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center text-sm text-gray-500 mb-3">
+                        <Calendar size={14} className="mr-2" />
+                        <span>{formatDate(currentNews.publishedDate)}</span>
+                        <span className="mx-2">•</span>
+                        <span className="font-medium">{currentNews.source}</span>
+                      </div>
+                      
+                      <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4 hover:text-[#009C9F] transition-colors">
+                        {currentNews.title}
+                      </h3>
+                      
+                      <p className="text-gray-600 leading-relaxed mb-6 line-clamp-3">
+                        {currentNews.summary}
+                      </p>
+                    </div>
+
+                    <div>
+                      <a
+                        href={currentNews.articleUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center bg-gradient-to-r from-[#009C9F] to-[#00446E] text-white px-6 py-3 rounded-full font-semibold hover:from-[#00446E] hover:to-[#009C9F] transition-all duration-300 group"
+                      >
+                        Read Full Article
+                        <ExternalLink size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            )}
+          </div>
         </div>
 
-        {/* Carousel Navigation Dots */}
-        {visibleNews.length > 1 && (
-          <div className="flex items-center justify-center space-x-4 mb-8">
+        {/* Dot Indicators */}
+        {filteredNews.length > 1 && (
+          <div className="flex items-center justify-center space-x-3 mb-12">
+            {filteredNews.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => handleDotClick(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  currentSlide === index 
+                    ? 'bg-[#009C9F] scale-125' 
+                    : 'bg-gray-300 hover:bg-gray-400'
+                }`}
+                aria-label={`Go to news article ${index + 1}`}
+              />
+            ))}
+          </div>
+        )}
+
+        {/* News Counter */}
+        {filteredNews.length > 1 && (
+          <div className="text-center mb-8">
+            <span className="text-sm text-gray-500">
+              {currentSlide + 1} of {filteredNews.length} articles
+            </span>
+          </div>
+        )}
+
+        {/* Load More Section - Show if there are more articles in other categories */}
+        {selectedCategory !== 'All' && news.length > filteredNews.length && (
+          <div className="text-center mb-12">
             <button
-              onClick={() => setCurrentSlide(prev => prev === 0 ? visibleNews.length - 1 : prev - 1)}
-              className="p-2 rounded-full bg-gray-100 hover:bg-[#009C9F] hover:text-white transition-colors"
-              aria-label="Previous slide"
+              onClick={() => setSelectedCategory('All')}
+              className="btn-primary"
             >
-              <ChevronLeft size={20} />
-            </button>
-            
-            <div className="flex space-x-2">
-              {visibleNews.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-colors ${
-                    currentSlide === index ? 'bg-[#009C9F]' : 'bg-gray-300'
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div>
-            
-            <button
-              onClick={() => setCurrentSlide(prev => (prev + 1) % visibleNews.length)}
-              className="p-2 rounded-full bg-gray-100 hover:bg-[#009C9F] hover:text-white transition-colors"
-              aria-label="Next slide"
-            >
-              <ChevronRight size={20} />
+              View All Articles
             </button>
           </div>
         )}
 
-        {/* Load More Button */}
-        {hasMoreNews && (
-          <div className="text-center mb-12">
+        {/* Category Stats */}
+        <div 
+          className="bg-gradient-to-r from-gray-50 to-white rounded-2xl p-6 mb-8"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <div className="text-center">
+            <h3 className="text-lg font-semibold text-[#00446E] mb-2">
+              {selectedCategory === 'All' ? 'All Education News' : selectedCategory}
+            </h3>
+            <p className="text-gray-600">
+              {filteredNews.length} article{filteredNews.length !== 1 ? 's' : ''} available
+            </p>
+            {filteredNews.length > 1 && (
+              <p className="text-sm text-gray-500 mt-1">
+                Auto-rotating every 8 seconds • Hover to pause
+              </p>
+            )}
+          </div>
+        </div>
+
+        {/* No Articles Message */}
+        {filteredNews.length === 0 && !isLoading && (
+          <div className="text-center py-12">
+            <Newspaper size={48} className="mx-auto text-gray-400 mb-4" />
+            <h3 className="text-xl font-semibold text-gray-600 mb-2">No articles found</h3>
+            <p className="text-gray-500">
+              No articles available for the selected category. Try selecting "All" to see all articles.
+            </p>
             <button
-              onClick={handleLoadMore}
-              className="btn-primary"
+              onClick={() => setSelectedCategory('All')}
+              className="mt-4 btn-primary"
             >
-              Load More Articles
+              View All Articles
             </button>
+          </div>
+        )}
+
+        {/* Single Article Message */}
+        {filteredNews.length === 1 && (
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm">
+              <Newspaper size={16} className="mr-2" />
+              Only one article available in this category
+            </div>
           </div>
         )}
 
