@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import NewsFeed from './components/NewsFeed';
 import ProblemSolution from './components/ProblemSolution';
 import WhyEdHub from './components/WhyEdHub';
 import CTASection from './components/CTASection';
@@ -14,6 +15,7 @@ import Footer from './components/Footer';
 const HomePage = () => (
   <>
     <Hero />
+    <NewsFeed />
     <ProblemSolution />
     <WhyEdHub />
     <CTASection />
